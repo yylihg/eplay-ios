@@ -1,0 +1,51 @@
+
+platform :ios,'8.0'
+workspace 'LoveForMusic.xcworkspace'
+
+abstract_target 'eplay-ios' do
+    pod 'SDWebImage', '~> 4.0.0'
+    pod 'Toast', '~> 3.0'
+    pod 'M80AttributedLabel', '~> 1.6.3'
+    pod 'TZImagePickerController', '~> 1.9.3'
+
+	target 'LoveForMusic' do
+ 		project 'LoveForMusic.xcodeproj'
+        pod 'YYKeyboardManager', '~> 1.0.1'
+        pod 'YYText', '~> 1.0.7'
+        pod 'YYModel', '~> 1.0.4'
+        pod 'YYWebImage', '~> 1.0.5'
+        pod 'RealReachability', '~> 1.1.9'
+        
+        pod 'FMDB', '~> 2.7.2'
+        pod 'Reachability', '~> 3.2'
+        pod 'CocoaLumberjack', '~> 3.2.1'
+#        pod 'SSZipArchive', '~> 1.8.1'
+        pod 'SVProgressHUD', '~> 2.1.2'
+		# 取决于你的工程如何组织，你的node_modules文件夹可能会在别的地方。
+		# 请将:path后面的内容修改为正确的路径（一定要确保正确～～）。
+		pod 'React', :path => ‘./React/node_modules/react-native', :subspecs => [
+	          'Core',
+		  'ART',
+		  'RCTActionSheet',
+		  'RCTGeolocation',
+		  'RCTImage',
+		  'RCTNetwork',
+		  'RCTPushNotification',
+		  'RCTSettings', 
+		  'RCTText',
+		  'RCTVibration',
+		  'RCTWebSocket',
+		  'RCTLinkingIOS',
+	      'RCTAnimation'
+		]
+		pod "Yoga", :path => "./React/node_modules/react-native/ReactCommon/yoga"
+	    pod 'AFNetworking', '~> 3.0'
+	    pod 'ZFPlayer'
+	    pod 'ZFDownload'
+	    pod 'Masonry'
+	end
+
+	target 'NIMKit' do
+        project '../NIMKit/NIMKit.xcodeproj'
+    end
+end

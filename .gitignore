@@ -1,0 +1,9 @@
+eplay-ios/React/node_modules
+*log
+eplay-ios/React/.idea
+eplay-ios/Pods
+eplay-ios/oveForMusic.xcworkspace/xcuserdata
+eplay-ios/React/package-lock.json
+eplay-ios/Podfile.lock
+eplay-ios/LoveForMusic.xcworkspace/contents.xcworkspacedata
+eplay-ios/LoveForMusic.xcworkspace/*

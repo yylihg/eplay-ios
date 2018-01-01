@@ -1,0 +1,18 @@
+{
+  "name": "LoveForMusic",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "build-ios": "react-native bundle --entry-file index.ios.js --platform ios --dev false --bundle-output ../LoveForMusic/jsbundle/ios.jsbundle --assets-dest ../LoveForMusic/jsbundle"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.10",
+    "react": "16.0.0-alpha.6",
+    "react-native": "0.43.3",
+    "react-native-datepicker": "^1.6.0",
+    "react-native-easy-toast": "^1.0.6",
+    "react-native-scrollable-tab-view": "0.6.5",
+    "react-native-viewpager": "^0.2.13"
+  }
+}
