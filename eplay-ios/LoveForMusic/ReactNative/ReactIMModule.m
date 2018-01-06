@@ -66,6 +66,12 @@ RCT_EXPORT_METHOD(pushLiveController:(NSString *)roomId pushUrl:(NSString *)push
                 [[NTESChatroomDataCenter sharedInstance] cacheAnchorInfo:me roomId:request.roomId];
                 [[NTESChatroomDataCenter sharedInstance] cacheMyInfo:me roomId:request.roomId];
                 [[NTESChatroomDataCenter sharedInstance] cacheChatroom:chatroom];
+                
+                
+                NTESLiveStreamVC *push = [[NTESLiveStreamVC alloc] initWithChatroomId:roomId];
+                push.pushUrl = pushUrl;
+                AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+                [app.nav pushViewController:push animated:YES];
             }
             else
             {
