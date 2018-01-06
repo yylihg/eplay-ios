@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>WKBackgroundModes</key>
+	<array>
+		<string>App processes Newsstand Kit downloads</string>
+		<string>App registers for location updates</string>
+		<string>App plays audio or streams audio/video using AirPlay</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>

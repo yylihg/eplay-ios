@@ -8,6 +8,7 @@
 
 #import "UIImage+NTES.h"
 #import "NTESDevice.h"
+#import <objc/runtime.h>
 
 #define ChartletBundle              @"NIMDemoChartlet.bundle"
 #define EmojiCatalog                @"default"

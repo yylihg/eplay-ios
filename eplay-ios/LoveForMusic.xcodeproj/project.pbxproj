@@ -391,7 +391,6 @@
 		4FC731651FE6B1B00089D487 /* libz.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC731641FE6B1B00089D487 /* libz.1.tbd */; };
 		4FC7316D1FE6B22E0089D487 /* libNELivePlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC7316B1FE6B22E0089D487 /* libNELivePlayer.a */; };
 		4FC7316E1FE6B22E0089D487 /* libNMCBasicModule.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC7316C1FE6B22E0089D487 /* libNMCBasicModule.a */; };
-		4FC731801FE6B2670089D487 /* NMCVideoFilter.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4FC731781FE6B2670089D487 /* NMCVideoFilter.bundle */; };
 		4FC731821FE6B2670089D487 /* libLSMediaCapture.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC7317A1FE6B2670089D487 /* libLSMediaCapture.a */; };
 		4FC731841FE6B2670089D487 /* libfdk-aac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC7317C1FE6B2670089D487 /* libfdk-aac.a */; };
 		4FC731851FE6B2670089D487 /* librtmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC7317D1FE6B2670089D487 /* librtmp.a */; };
@@ -1353,7 +1352,6 @@
 		4FC731741FE6B2670089D487 /* LSLiveStreamingParaCtxConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSLiveStreamingParaCtxConfiguration.h; sourceTree = "<group>"; };
 		4FC731751FE6B2670089D487 /* LSVideoParaCtxConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSVideoParaCtxConfiguration.h; sourceTree = "<group>"; };
 		4FC731761FE6B2670089D487 /* LSMediaCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSMediaCapture.h; sourceTree = "<group>"; };
-		4FC731781FE6B2670089D487 /* NMCVideoFilter.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NMCVideoFilter.bundle; sourceTree = "<group>"; };
 		4FC7317A1FE6B2670089D487 /* libLSMediaCapture.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libLSMediaCapture.a; sourceTree = "<group>"; };
 		4FC7317C1FE6B2670089D487 /* libfdk-aac.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libfdk-aac.a"; sourceTree = "<group>"; };
 		4FC7317D1FE6B2670089D487 /* librtmp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = librtmp.a; sourceTree = "<group>"; };
@@ -3579,7 +3577,6 @@
 			isa = PBXGroup;
 			children = (
 				4FC731C21FE6B77F0089D487 /* libyuv.a */,
-				4FC731781FE6B2670089D487 /* NMCVideoFilter.bundle */,
 				4FC7317A1FE6B2670089D487 /* libLSMediaCapture.a */,
 				4FC7317C1FE6B2670089D487 /* libfdk-aac.a */,
 				4FC7317D1FE6B2670089D487 /* librtmp.a */,
@@ -5281,7 +5278,6 @@
 				4DA4A9BA1E9100560073D246 /* icon_login_pwd.png in Resources */,
 				4FC732621FE6C3000089D487 /* oppo27.png in Resources */,
 				4FC732401FE6C3000089D487 /* oppo70.png in Resources */,
-				4FC731801FE6B2670089D487 /* NMCVideoFilter.bundle in Resources */,
 				4FC732511FE6C3000089D487 /* oppo13.png in Resources */,
 				4FC734C41FE6C3130089D487 /* NTESAnchorTopBar.xib in Resources */,
 				4FC732781FE6C3000089D487 /* oppo41.png in Resources */,

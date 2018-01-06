@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
-
+#import <NIMSDK/NIMSDK.h>
 @interface NTESSessionUtil : NSObject
 
 + (CGSize)getImageSizeWithImageOriginSize:(CGSize)originSize
