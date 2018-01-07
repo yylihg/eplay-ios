@@ -11,7 +11,14 @@
 #import "ResetPasswordViewController.h"
 #import "MainViewController.h"
 #import "VideoViewController.h"
+#import "NTESLoginManager.h"
+#import "NSString+NTES.h"
+#import "UIView+Toast.h"
 
+#import "NTESLiveStreamVC.h"
+#import "NTESLiveDataCenter.h"
+#import "NTESChatroomManger.h"
+#import "NTESEncryption.h"
 @interface ViewController ()
 //- (IBAction)goRN:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *usernameET;
@@ -28,7 +35,7 @@
 @end
 
 @implementation ViewController
-@synthesize ToastView;@synthesize userInfo = _userInfo;
+@synthesize userInfo = _userInfo;
 @synthesize delegate = _delegate;
 
 
@@ -52,8 +59,6 @@
     self.passwordET.delegate = self;
     // Do any additional setup after loading the view, typically from a nib.
     [AppDelegate storyBoradAutoLay:self.view];
-    //初始化toastView
-    [self initToastView];
 
     self.progressBar.hidden = YES;//设置登陆进度条不可见
 
@@ -89,17 +94,17 @@
         return;
     }
     //判断用户名是否为空，为空提示用户
-    if ([self.usernameET.text isEqualToString:@""]) {
-        self.usernameET.placeholder = @"用户名不能为空";
-        [self showDialog:@"用户名不能为空"];
-        return;
-    }
-    //判断密码是否为空，为空提示用户
-    if ([self.passwordET.text isEqualToString:@""]) {
-        self.passwordET.placeholder = @"密码不能为空";
-        [self showDialog:@"密码不能为空"];
-        return;
-    }
+//    if ([self.usernameET.text isEqualToString:@""]) {
+//        self.usernameET.placeholder = @"用户名不能为空";
+//        [self showDialog:@"用户名不能为空"];
+//        return;
+//    }
+//    //判断密码是否为空，为空提示用户
+//    if ([self.passwordET.text isEqualToString:@""]) {
+//        self.passwordET.placeholder = @"密码不能为空";
+//        [self showDialog:@"密码不能为空"];
+//        return;
+//    }
     self.progressBar.hidden = NO;
     
     [self getAccessToken];
@@ -129,10 +134,10 @@
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager.requestSerializer setValue:_userInfo.accessToken forHTTPHeaderField:@"access-token"];
     NSMutableDictionary *parameters = [[NSMutableDictionary alloc] init];
-    [parameters setObject:self.usernameET.text forKey:@"username"];
-    [parameters setObject:self.passwordET.text forKey:@"password"];
-//    [parameters setObject:@"15959445322"forKey:@"username"];
-//    [parameters setObject:@"wbk123" forKey:@"password"];
+//    [parameters setObject:self.usernameET.text forKey:@"username"];
+//    [parameters setObject:self.passwordET.text forKey:@"password"];
+    [parameters setObject:@"15959445222"forKey:@"username"];
+    [parameters setObject:@"wxh123" forKey:@"password"];
     [manager POST: [NSString stringWithFormat:@"%@%@" , [Utils getStringFromPlist:@"connectIp"],@"/api/login/login.do" ]  parameters:parameters
          progress:^(NSProgress * _Nonnull uploadProgress) {
         
@@ -150,9 +155,34 @@
                  if (_delegate  != NULL) {
                      [_delegate loginSuccess:responseObject];
                  }
+                 
+                 
+                 
+                 NSString *loginAccount =  [[responseObject objectForKey:@"data"] objectForKey:@"IM_USERNAME"];
+                 NSString *password   = [[responseObject objectForKey:@"data"] objectForKey:@"IM_PASSWORD"];
+                 NSString *loginToken   = password;
+                 
+                 [[[NIMSDK sharedSDK] loginManager] login:loginAccount
+                                                    token:loginToken
+                                               completion:^(NSError *error) {
+                                                   if (error == nil)
+                                                   {
+                                                       LoginData *sdkData = [[LoginData alloc] init];
+                                                       sdkData.account   = loginAccount;
+                                                       sdkData.token     = loginToken;
+                                                       [[NTESLoginManager sharedManager] setCurrentLoginData:sdkData];
+                                                       
+                                                       //保存用户名和密码
+                                                       [NTESLoginManager sharedManager].currentNTESLoginData.accid = loginAccount;
+                                                       [NTESLoginManager sharedManager].currentNTESLoginData.password = loginToken;
+                                                       
+                                                   }
+                                               }];
+//
+                 
                  [self.navigationController popViewControllerAnimated:YES];
              }else{
-                 [self showDialog: [[responseObject objectForKey:@"errorMsg"] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+//                 [self showDialog: [[responseObject objectForKey:@"errorMsg"] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
              }
 //                NSLog(@"ihg%@",[[responseObject objectForKey:@"errorMsg"] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]);
             
@@ -179,26 +209,18 @@
 }
 
 - (IBAction)registBtn:(id)sender {
-    RegistViewController *mRegistViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"registView"];
-     [self.navigationController pushViewController:mRegistViewController animated:YES];
-}
 
-//初始化ToastView
--(void)initToastView{
-    ToastView = [[MBProgressHUD alloc] initWithView:self.view];
-    ToastView.delegate = self;
-    
-    [self.view addSubview:ToastView];
-    
-    ToastView.yOffset = 200.0f;
-    ToastView.mode = MBProgressHUDModeText;
+    //进入聊天室
+    NTESLiveStreamVC *push = [[NTESLiveStreamVC alloc] initWithChatroomId:@"19804023"];
+    push.pushUrl = @"rtmp://p1948666e.live.126.net/live/eda925a2e7b24416b238960c3d2e437d?wsSecret=2546a304bbd377cd51045178410aec87&wsTime=1512883961";
+    [self presentViewController:push animated:YES completion:nil];
+//
+//    RegistViewController *mRegistViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"registView"];
+//     [self.navigationController pushViewController:mRegistViewController animated:YES];
 }
 //展示ToastView
 -(void)showDialog:(NSString *)msg{
-    
-    ToastView.labelText = msg;
-    [ToastView show:true];
-    [ToastView hide:true afterDelay:1];
+    [self.navigationController.view makeToast:msg duration:2.0 position:CSToastPositionCenter];
 }
 
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{

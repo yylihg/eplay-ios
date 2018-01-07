@@ -27,18 +27,13 @@
 {
     if (self = [super init])
     {
-        /* --------------------------  开发环境 ----------------------------*/
-//        _appKey = @"9f818f8b0d072adb91a0cad597590b51";
-//        _apiURL = @"http://223.252.220.238:8080/appdemo";
-//        _shortVideoAppKey = @"9f818f8b0d072adb91a0cad597590b51";
-        /* --------------------------  End -------------------------------*/
-        
-        /* --------------------------  线上环境 ----------------------------*/
-        _appKey = @"d49345914660a3af65e7fa287ec90e6b";
+        _appKey = @"435770e8f60e25d57a4e83779c0dcc44";
         _apiURL = @"https://app.netease.im/appdemo";
+        _apnsCername = @"ENTERPRISE";
+        _pkCername = @"DEMO_PUSH_KIT";
         _shortVideoAppKey = @"d49345914660a3af65e7fa287ec90e6b";
-        /* --------------------------  End -------------------------------*/
         
+        _redPacketConfig = [[NTESRedPacketConfig alloc] init];        
     }
     return self;
 }
@@ -48,15 +43,43 @@
     return _appKey;
 }
 
-- (NSString *)apiURL
-{
-    return _apiURL;
-}
 
 - (NSString *)cerName
 {
     return nil;
 }
 
+- (NSString *)apiURL
+{
+//    NSAssert([[NIMSDK sharedSDK] isUsingDemoAppKey], @"只有 demo appKey 才能够使用这个API接口");
+    return _apiURL;
+}
+
+- (void)registerConfig:(NSDictionary *)config
+{
+    if (config[@"red_packet_online"])
+    {
+        _redPacketConfig.useOnlineEnv = [config[@"red_packet_online"] boolValue];
+    }
+}
+
+
+@end
+
+
+
+@implementation NTESRedPacketConfig
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self)
+    {
+        _useOnlineEnv = YES;
+        _aliPaySchemeUrl = @"alipay052969";
+        _weChatSchemeUrl = @"wx2a5538052969956e";
+    }
+    return self;
+}
 
 @end
