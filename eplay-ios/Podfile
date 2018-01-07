@@ -45,7 +45,7 @@ abstract_target 'eplay-ios' do
 	    pod 'Masonry'
 	end
 
-	target 'NIMKit' do
-        project '../NIMKit/NIMKit.xcodeproj'
-    end
+	#target 'NIMKit' do
+    #    project '../NIMKit/NIMKit.xcodeproj'
+    #end
 end

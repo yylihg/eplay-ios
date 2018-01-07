@@ -8,7 +8,7 @@
 
 #import "ReactIMModule.h"
 
-#import "NTESSessionViewController.h"
+//#import "NTESSessionViewController.h"
 #import "NTESLiveStreamVC.h"
 #import "NTESChatroomDataCenter.h"
 
@@ -25,11 +25,11 @@ RCT_EXPORT_METHOD(
 {
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        NIMSession *session = [NIMSession session:uid type:NIMSessionTypeP2P];
-        NTESSessionViewController *vc = [[NTESSessionViewController alloc] initWithSession:session];
-        AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-        [app.nav pushViewController:vc animated:YES];
-        
+//        NIMSession *session = [NIMSession session:uid type:NIMSessionTypeP2P];
+//        NTESSessionViewController *vc = [[NTESSessionViewController alloc] initWithSession:session];
+//        AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+//        [app.nav pushViewController:vc animated:YES];
+//
     });
 }
 
@@ -39,10 +39,10 @@ RCT_EXPORT_METHOD(
 {
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        NIMSession *session = [NIMSession session:teamid type:NIMSessionTypeTeam];
-        NTESSessionViewController *vc = [[NTESSessionViewController alloc] initWithSession:session];
-        AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-        [app.nav pushViewController:vc animated:YES];
+//        NIMSession *session = [NIMSession session:teamid type:NIMSessionTypeTeam];
+//        NTESSessionViewController *vc = [[NTESSessionViewController alloc] initWithSession:session];
+//        AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+//        [app.nav pushViewController:vc animated:YES];
         
     });
 }
