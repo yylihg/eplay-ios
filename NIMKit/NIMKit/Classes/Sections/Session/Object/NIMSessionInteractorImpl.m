@@ -17,16 +17,16 @@
 #import "NIMKitAudioCenter.h"
 
 static const void * const NTESDispatchMessageDataPrepareSpecificKey = &NTESDispatchMessageDataPrepareSpecificKey;
-//dispatch_queue_t NTESMessageDataPrepareQueue()
-//{
-//    static dispatch_queue_t queue;
-//    static dispatch_once_t onceToken;
-//    dispatch_once(&onceToken, ^{
-//        queue = dispatch_queue_create("nim.demo.message.queue", 0);
-//        dispatch_queue_set_specific(queue, NTESDispatchMessageDataPrepareSpecificKey, (void *)NTESDispatchMessageDataPrepareSpecificKey, NULL);
-//    });
-//    return queue;
-//}
+dispatch_queue_t NTESMessageDataPrepareQueue()
+{
+    static dispatch_queue_t queue;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        queue = dispatch_queue_create("nim.demo.message.queue", 0);
+        dispatch_queue_set_specific(queue, NTESDispatchMessageDataPrepareSpecificKey, (void *)NTESDispatchMessageDataPrepareSpecificKey, NULL);
+    });
+    return queue;
+}
 
 
 @interface NIMSessionInteractorImpl()<NIMLocationViewControllerDelegate,NIMMediaManagerDelegate>
@@ -111,23 +111,23 @@ static const void * const NTESDispatchMessageDataPrepareSpecificKey = &NTESDispa
         self.pendingChatroomModels = [[NSMutableArray alloc] init];
     }
     __weak typeof(self) weakSelf = self;
-//    dispatch_async(NTESMessageDataPrepareQueue1z(), ^{
-//        NSMutableArray *models = [[NSMutableArray alloc] init];
-//        for (NIMMessage *message in messages)
-//        {
-//            if (message.isDeleted)
-//            {
-//                continue;
-//            }
-//            NIMMessageModel *model = [[NIMMessageModel alloc] initWithMessage:message];
-//            [weakSelf.layout calculateContent:model];
-//            [models addObject:model];
-//        }
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            [weakSelf.pendingChatroomModels addObjectsFromArray:models];
-//            [weakSelf processChatroomMessageModels];
-//        });
-//    });
+    dispatch_async(NTESMessageDataPrepareQueue(), ^{
+        NSMutableArray *models = [[NSMutableArray alloc] init];
+        for (NIMMessage *message in messages)
+        {
+            if (message.isDeleted)
+            {
+                continue;
+            }
+            NIMMessageModel *model = [[NIMMessageModel alloc] initWithMessage:message];
+            [weakSelf.layout calculateContent:model];
+            [models addObject:model];
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [weakSelf.pendingChatroomModels addObjectsFromArray:models];
+            [weakSelf processChatroomMessageModels];
+        });
+    });
 }
 
 - (NIMMessageModel *)deleteMessage:(NIMMessage *)message

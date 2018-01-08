@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import <NIMSDK/NIMSDK.h>
 
 @class NTESJanKenPonAttachment;
 @class NTESSnapchatAttachment;
@@ -16,7 +15,6 @@
 @class NTESWhiteboardAttachment;
 @class NTESRedPacketAttachment;
 @class NTESRedPacketTipAttachment;
-@class NTESPresent;
 
 @interface NTESSessionMsgConverter : NSObject
 
@@ -47,9 +45,5 @@
 + (NIMMessage *)msgWithRedPacket:(NTESRedPacketAttachment *)attachment;
 
 + (NIMMessage *)msgWithRedPacketTip:(NTESRedPacketTipAttachment *)attachment;
-
-+ (NIMMessage *)msgWithPresent:(NTESPresent *)present;
-
-+ (NIMMessage *)msgWithLike;
 
 @end

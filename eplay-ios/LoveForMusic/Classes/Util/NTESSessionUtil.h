@@ -45,23 +45,4 @@
 
 + (NSString *)formatAutoLoginMessage:(NSError *)error;
 
-
-+ (CGSize)getImageSizeWithImageOriginSize:(CGSize)originSize
-                                  minSize:(CGSize)imageMinSize
-                                  maxSize:(CGSize)imageMaxSize;
-
-
-//接收时间格式化
-+ (NSString*)showTime:(NSTimeInterval) msglastTime showDetail:(BOOL)showDetail;
-
-+ (void)sessionWithInputURL:(NSURL*)inputURL
-                  outputURL:(NSURL*)outputURL
-               blockHandler:(void (^)(AVAssetExportSession*))handler;
-
-+ (NSDictionary *)dictByJsonData:(NSData *)data;
-
-+ (NSDictionary *)dictByJsonString:(NSString *)jsonString;
-
-
-
 @end

@@ -13,6 +13,7 @@
 @end
 
 @implementation BaseViewController
+@synthesize ToastView;
 @synthesize mConnector;
 
 
@@ -20,11 +21,27 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [AppDelegate storyBoradAutoLay:self.view];
+    //初始化toastView
+    [self initToastView];
+}
+
+//初始化ToastView
+-(void)initToastView{
+    ToastView = [[MBProgressHUD alloc] initWithView:self.view];
+    ToastView.delegate = self;
+    
+    [self.view addSubview:ToastView];
+    
+    ToastView.yOffset = 200.0f;
+    ToastView.mode = MBProgressHUDModeText;
 }
 
 //展示ToastView
 -(void)toast:(NSString *)msg{
-    [self.navigationController.view makeToast:msg duration:2.0 position:CSToastPositionCenter];
+    
+    ToastView.labelText = msg;
+    [ToastView show:true];
+    [ToastView hide:true afterDelay:1];
 }
 
 - (void)didReceiveMemoryWarning {

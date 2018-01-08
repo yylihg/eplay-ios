@@ -14,12 +14,6 @@
 #import "NTESWhiteboardAttachment.h"
 #import "NTESRedPacketAttachment.h"
 #import "NTESRedPacketTipAttachment.h"
-#import "NTESPresentAttachment.h"
-#import "NTESPresentAttachment.h"
-#import "NTESLikeAttachment.h"
-#import "NTESPresent.h"
-
-
 
 @implementation NTESSessionMsgConverter
 
@@ -206,29 +200,5 @@
     
     return message;
 }
-
-
-+ (NIMMessage *)msgWithPresent:(NTESPresent *)present
-{
-    NIMMessage *message        = [[NIMMessage alloc] init];
-    NIMCustomObject *object    = [[NIMCustomObject alloc] init];
-    NTESPresentAttachment *attachment = [[NTESPresentAttachment alloc] init];
-    attachment.presentType     = present.type;
-    attachment.count           = 1;
-    object.attachment          = attachment;
-    message.messageObject      = object;
-    return message;
-}
-
-+ (NIMMessage *)msgWithLike
-{
-    NIMMessage *message        = [[NIMMessage alloc] init];
-    NIMCustomObject *object    = [[NIMCustomObject alloc] init];
-    NTESLikeAttachment *attachment = [[NTESLikeAttachment alloc] init];
-    object.attachment          = attachment;
-    message.messageObject      = object;
-    return message;
-}
-
 
 @end

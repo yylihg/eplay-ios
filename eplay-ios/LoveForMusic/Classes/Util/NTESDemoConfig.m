@@ -27,31 +27,19 @@
 {
     if (self = [super init])
     {
-        _appKey = @"12ccc6179640608b6afad5d625d5a3c8";
-        _apiURL = @"https://app.netease.im/appdemo";
+        _appKey = @"d1851dcbde93984595180cc0a3704ddd";
+        _apiURL = @"https://app.netease.im/api";
         _apnsCername = @"ENTERPRISE";
         _pkCername = @"DEMO_PUSH_KIT";
-        _shortVideoAppKey = @"d49345914660a3af65e7fa287ec90e6b";
         
         _redPacketConfig = [[NTESRedPacketConfig alloc] init];        
     }
     return self;
 }
 
-- (NSString *)appKey
-{
-    return _appKey;
-}
-
-
-- (NSString *)cerName
-{
-    return nil;
-}
-
 - (NSString *)apiURL
 {
-//    NSAssert([[NIMSDK sharedSDK] isUsingDemoAppKey], @"只有 demo appKey 才能够使用这个API接口");
+    NSAssert([[NIMSDK sharedSDK] isUsingDemoAppKey], @"只有 demo appKey 才能够使用这个API接口");
     return _apiURL;
 }
 

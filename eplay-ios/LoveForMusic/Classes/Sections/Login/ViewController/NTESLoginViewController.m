@@ -110,7 +110,7 @@ NTES_USE_CLEAR_BAR
     [SVProgressHUD show];
     
     NSString *loginAccount = username;
-    NSString *loginToken;//   = [password tokenByPassword];
+    NSString *loginToken   = [password tokenByPassword];
     
     //NIM SDK 只提供消息通道，并不依赖用户业务逻辑，开发者需要为每个APP用户指定一个NIM帐号，NIM只负责验证NIM的帐号即可(在服务器端集成)
     //用户APP的帐号体系和 NIM SDK 并没有直接关系

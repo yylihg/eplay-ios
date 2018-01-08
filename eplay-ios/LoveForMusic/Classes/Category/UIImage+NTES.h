@@ -16,14 +16,4 @@
 
 - (UIImage *)imageForAvatarUpload;
 
-
-
-+ (UIImage*)imageWithVideoPath:(NSString *)filePath;
-
-+ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size;
-
-+ (UIImage *)imageWithText:(NSString *)text width:(float)width;
-
-- (void)imageSaveToPhoto:(void(^)(NSError *error))complete;
-
 @end

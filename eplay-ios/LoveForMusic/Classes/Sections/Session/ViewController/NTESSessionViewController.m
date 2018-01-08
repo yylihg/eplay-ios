@@ -132,12 +132,6 @@ NIMEventSubscribeManagerDelegate>
     self.fpsLabel.top   = self.tableView.top + self.tableView.contentInset.top;
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    [self.navigationController setNavigationBarHidden:NO animated:animated];
-}
-
 
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];

@@ -9,26 +9,16 @@
 #ifndef NIMDemo_GlobalMacro_h
 #define NIMDemo_GlobalMacro_h
 
-#define NTES_ERROR_MSG_KEY @"description"
-#define ChatCellDefaultChatInterval 10.0
-#define DefaultToolButtonWidth 40.0
-
-#define IOS9            ([[[UIDevice currentDevice] systemVersion] doubleValue] >= 9.0)
 #define IOS8            ([[[UIDevice currentDevice] systemVersion] doubleValue] >= 8.0)
 #define UIScreenWidth                              [UIScreen mainScreen].bounds.size.width
 #define UIScreenHeight                             [UIScreen mainScreen].bounds.size.height
-#define UISreenWidthScale   UIScreenWidth / 375 //以iphone6 尺寸为标准
-#define UISreenHeightScale  UIScreenHeight / 667
+#define UISreenWidthScale   UIScreenWidth / 320
 
 
 #define UICommonTableBkgColor UIColorFromRGB(0xe4e7ec)
-#define UICommonBtnBkgColor UIColorFromRGB(0x238ef1)
 #define Message_Font_Size   14        // 普通聊天文字大小
 #define Notification_Font_Size   10   // 通知文字大小
 #define Chatroom_Message_Font_Size 16 // 聊天室聊天文字大小
-#define NTES_NOTI_LOGIN_SUCCESS @"NTES_NOTI_LOGIN_SUCCESS"
-#define NTES_NOTI_LOGOUT @"NTES_NOTI_LOGOUT"
-
 
 
 #define SuppressPerformSelectorLeakWarning(Stuff) \
@@ -48,17 +38,6 @@ blue:((float)(rgbValue & 0x0000FF))/255.0 \
 alpha:alphaValue]
 
 #define UIColorFromRGB(rgbValue) UIColorFromRGBA(rgbValue, 1.0)
-
-
-#define UIColorFromHex(hexValue) [UIColor colorWithRed:((float)((hexValue & 0xFF0000) >> 16))/255.0 \
-green:((float)((hexValue & 0xFF00) >> 8))/255.0 \
-blue:((float)(hexValue & 0xFF))/255.0 alpha:1.0]
-
-#define UIColorFromHexAlpha(hexValue, a) [UIColor colorWithRed:((float)((hexValue & 0xFF0000) >> 16))/255.0 \
-green:((float)((hexValue & 0xFF00) >> 8))/255.0 \
-blue:((float)(hexValue & 0xFF))/255.0 alpha:(a)]
-
-
 
 #define dispatch_sync_main_safe(block)\
 if ([NSThread isMainThread]) {\

@@ -19,10 +19,6 @@
 @property (nonatomic,copy)    NSString    *apiURL;
 @property (nonatomic,copy)    NSString    *apnsCername;
 @property (nonatomic,copy)    NSString    *pkCername;
-
-@property (nonatomic,copy)  NSString    *cerName;
-@property (nonatomic, copy) NSString    *shortVideoAppKey;
-
 @property (nonatomic,strong)  NTESRedPacketConfig *redPacketConfig;
 
 - (void)registerConfig:(NSDictionary *)config;

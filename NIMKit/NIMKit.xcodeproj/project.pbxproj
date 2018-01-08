@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1DDF4EA8A99F4585973AB127 /* libevent.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C2D4C72B4119937E1D97520 /* libevent.a */; };
+		32424EC7AB6684F019129C75 /* libNMCVideoModule.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 261D4C44855E71A154F635B6 /* libNMCVideoModule.a */; };
 		34654E18AB79FE76A7118D78 /* libnio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8544C1E9C1DD87D5920E6F3 /* libnio.a */; };
 		3AED4AFD9AA851746CB06A63 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 676347A987CB10FE66B70BD8 /* libcrypto.a */; };
 		422C4C2DAE7012AD5F9C465C /* libopus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 152B4B838D42D48AE29E044B /* libopus.a */; };
-		4FC731C11FE6B7180089D487 /* libNMCVideoModule.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC731C01FE6B7180089D487 /* libNMCVideoModule.a */; };
 		4FDBD4781FB85F4000EE8C09 /* libPods-eplay-ios-NIMKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FDBD4791FB85F4000EE8C09 /* libPods-eplay-ios-NIMKit.a */; };
 		610D71A11D0E5A9C00FCE25A /* NIMKitNotificationFirer.m in Sources */ = {isa = PBXBuildFile; fileRef = 610D71A01D0E5A9C00FCE25A /* NIMKitNotificationFirer.m */; };
 		6110D8AF1C24001300805BA4 /* UITableView+NIMScrollToBottom.m in Sources */ = {isa = PBXBuildFile; fileRef = 6110D8AE1C24001300805BA4 /* UITableView+NIMScrollToBottom.m */; };
@@ -157,9 +157,9 @@
 		152B4B838D42D48AE29E044B /* libopus.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopus.a; path = ./NIMKit/Vendors/NIMAVChat/Libs/libopus.a; sourceTree = SOURCE_ROOT; };
 		1C2D4C72B4119937E1D97520 /* libevent.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libevent.a; path = ./NIMKit/Vendors/NIMSDK/Libs/libevent.a; sourceTree = SOURCE_ROOT; };
 		1D8146E29EBD39275547F05A /* NMCVideoFilter.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = NMCVideoFilter.bundle; path = ./NIMKit/Vendors/NIMAVChat/Resources/NMCVideoFilter.bundle; sourceTree = SOURCE_ROOT; };
+		261D4C44855E71A154F635B6 /* libNMCVideoModule.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libNMCVideoModule.a; path = ./NIMKit/Vendors/NIMAVChat/Libs/libNMCVideoModule.a; sourceTree = SOURCE_ROOT; };
 		29CA48C7B5732447F74C4ECF /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = ./NIMKit/Vendors/NIMSDK/Libs/libssl.a; sourceTree = SOURCE_ROOT; };
 		4760903AB1A869A12FE415E9 /* Pods-eplay-ios-NIMKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eplay-ios-NIMKit.release.xcconfig"; path = "../eplay-ios/Pods/Target Support Files/Pods-eplay-ios-NIMKit/Pods-eplay-ios-NIMKit.release.xcconfig"; sourceTree = "<group>"; };
-		4FC731C01FE6B7180089D487 /* libNMCVideoModule.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNMCVideoModule.a; sourceTree = "<group>"; };
 		4FDBD4791FB85F4000EE8C09 /* libPods-eplay-ios-NIMKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-eplay-ios-NIMKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BFB470B8EC82541B6BCBDC7 /* NIMSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NIMSDK.framework; path = ./NIMKit/Vendors/NIMSDK/NIMSDK.framework; sourceTree = SOURCE_ROOT; };
 		610D719F1D0E5A9C00FCE25A /* NIMKitNotificationFirer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIMKitNotificationFirer.h; sourceTree = "<group>"; };
@@ -439,7 +439,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FC731C11FE6B7180089D487 /* libNMCVideoModule.a in Frameworks */,
 				4FDBD4781FB85F4000EE8C09 /* libPods-eplay-ios-NIMKit.a in Frameworks */,
 				1DDF4EA8A99F4585973AB127 /* libevent.a in Frameworks */,
 				71F14F9D8E43ABE3E21789D9 /* libaacplus.a in Frameworks */,
@@ -450,6 +449,7 @@
 				34654E18AB79FE76A7118D78 /* libnio.a in Frameworks */,
 				FE7B4EEE856E2E1133216C4C /* libopenh264.a in Frameworks */,
 				422C4C2DAE7012AD5F9C465C /* libopus.a in Frameworks */,
+				32424EC7AB6684F019129C75 /* libNMCVideoModule.a in Frameworks */,
 				E4FC4396835FC81D88CE649E /* libnts.a in Frameworks */,
 				BD8D48E0B54B679D85139E86 /* libGPUImage.a in Frameworks */,
 				705C4C6F851E3DB2CDBE803F /* NIMAVChat.framework in Frameworks */,
@@ -477,11 +477,11 @@
 		127C4E04AD7D9E69ABDCBBBC /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				4FC731C01FE6B7180089D487 /* libNMCVideoModule.a */,
 				EC124D0E90E1669505DDFCE5 /* libnvs.a */,
 				A8544C1E9C1DD87D5920E6F3 /* libnio.a */,
 				D1D945FDA92E400096CA40B4 /* libopenh264.a */,
 				152B4B838D42D48AE29E044B /* libopus.a */,
+				261D4C44855E71A154F635B6 /* libNMCVideoModule.a */,
 				7024474893407BCFA1C318E8 /* libnts.a */,
 				A5ED40629B31676909435C59 /* libGPUImage.a */,
 			);
