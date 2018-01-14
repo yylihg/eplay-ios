@@ -372,6 +372,33 @@
 		4F5480992003CA2600DC3855 /* NTESLogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5480902003CA2500DC3855 /* NTESLogManager.m */; };
 		4F54809A2003CA2600DC3855 /* NTESLogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5480922003CA2500DC3855 /* NTESLogViewController.m */; };
 		4F54809B2003CA2600DC3855 /* NTESLogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F5480952003CA2600DC3855 /* NTESLogViewController.xib */; };
+		4F54809E200AF63D00DC3855 /* live_mix_auido_example_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F54809C200AF63D00DC3855 /* live_mix_auido_example_1.mp3 */; };
+		4F54809F200AF63D00DC3855 /* live_mix_auido_example_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F54809D200AF63D00DC3855 /* live_mix_auido_example_2.mp3 */; };
+		4F5480BA200AF64800DC3855 /* 水印_15.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5480A1200AF64700DC3855 /* 水印_15.png */; };
+		4F5480BB200AF64800DC3855 /* 水印_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5480A2200AF64700DC3855 /* 水印_7.png */; };
+		4F5480BC200AF64800DC3855 /* 水印_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5480A3200AF64700DC3855 /* 水印_6.png */; };
+		4F5480BD200AF64800DC3855 /* 水印_14.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5480A4200AF64700DC3855 /* 水印_14.png */; };
+		4F5480BE200AF64800DC3855 /* 水印_16.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5480A5200AF64700DC3855 /* 水印_16.png */; };
+		4F5480BF200AF64800DC3855 /* 水印_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5480A6200AF64700DC3855 /* 水印_4.png */; };
+		4F5480C0200AF64800DC3855 /* 水印_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5480A7200AF64700DC3855 /* 水印_5.png */; };
+		4F5480C1200AF64800DC3855 /* 水印_17.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5480A8200AF64700DC3855 /* 水印_17.png */; };
+		4F5480C2200AF64800DC3855 /* 水印_13.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5480A9200AF64700DC3855 /* 水印_13.png */; };
+		4F5480C3200AF64800DC3855 /* 水印_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5480AA200AF64700DC3855 /* 水印_1.png */; };
+		4F5480C4200AF64800DC3855 /* 水印_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5480AB200AF64700DC3855 /* 水印_0.png */; };
+		4F5480C5200AF64800DC3855 /* 水印_12.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5480AC200AF64700DC3855 /* 水印_12.png */; };
+		4F5480C6200AF64800DC3855 /* 水印_10.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5480AD200AF64700DC3855 /* 水印_10.png */; };
+		4F5480C7200AF64800DC3855 /* 水印_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5480AE200AF64700DC3855 /* 水印_2.png */; };
+		4F5480C8200AF64800DC3855 /* 水印_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5480AF200AF64700DC3855 /* 水印_3.png */; };
+		4F5480C9200AF64800DC3855 /* 水印_11.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5480B0200AF64700DC3855 /* 水印_11.png */; };
+		4F5480CA200AF64800DC3855 /* 水印_20.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5480B1200AF64700DC3855 /* 水印_20.png */; };
+		4F5480CB200AF64800DC3855 /* 水印_21.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5480B2200AF64700DC3855 /* 水印_21.png */; };
+		4F5480CC200AF64800DC3855 /* 水印_22.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5480B3200AF64700DC3855 /* 水印_22.png */; };
+		4F5480CD200AF64800DC3855 /* 水印_8.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5480B4200AF64700DC3855 /* 水印_8.png */; };
+		4F5480CE200AF64800DC3855 /* 水印_9.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5480B5200AF64700DC3855 /* 水印_9.png */; };
+		4F5480CF200AF64800DC3855 /* 水印_19.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5480B6200AF64700DC3855 /* 水印_19.png */; };
+		4F5480D0200AF64800DC3855 /* 水印_18.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5480B7200AF64700DC3855 /* 水印_18.png */; };
+		4F5480D1200AF64800DC3855 /* icon_load_gif@3x.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4F5480B8200AF64700DC3855 /* icon_load_gif@3x.gif */; };
+		4F5480D2200AF64800DC3855 /* icon_load_gif@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4F5480B9200AF64700DC3855 /* icon_load_gif@2x.gif */; };
 		4F562BAF1FC0861500D8F25B /* NIMKitEmoticon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4F562B9B1FC0861400D8F25B /* NIMKitEmoticon.bundle */; };
 		4F562BB01FC0861500D8F25B /* NIMKitSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4F562B9C1FC0861400D8F25B /* NIMKitSettings.bundle */; };
 		4F562BB11FC0861500D8F25B /* BlizzardReg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F562B9E1FC0861500D8F25B /* BlizzardReg.ttf */; };
@@ -1019,6 +1046,33 @@
 		4F5480932003CA2600DC3855 /* NTESLogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTESLogViewController.h; sourceTree = "<group>"; };
 		4F5480942003CA2600DC3855 /* NTESLogUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTESLogUploader.h; sourceTree = "<group>"; };
 		4F5480952003CA2600DC3855 /* NTESLogViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NTESLogViewController.xib; sourceTree = "<group>"; };
+		4F54809C200AF63D00DC3855 /* live_mix_auido_example_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = live_mix_auido_example_1.mp3; path = "Supporting Files/live_mix_auido_example_1.mp3"; sourceTree = "<group>"; };
+		4F54809D200AF63D00DC3855 /* live_mix_auido_example_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = live_mix_auido_example_2.mp3; path = "Supporting Files/live_mix_auido_example_2.mp3"; sourceTree = "<group>"; };
+		4F5480A1200AF64700DC3855 /* 水印_15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "水印_15.png"; sourceTree = "<group>"; };
+		4F5480A2200AF64700DC3855 /* 水印_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "水印_7.png"; sourceTree = "<group>"; };
+		4F5480A3200AF64700DC3855 /* 水印_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "水印_6.png"; sourceTree = "<group>"; };
+		4F5480A4200AF64700DC3855 /* 水印_14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "水印_14.png"; sourceTree = "<group>"; };
+		4F5480A5200AF64700DC3855 /* 水印_16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "水印_16.png"; sourceTree = "<group>"; };
+		4F5480A6200AF64700DC3855 /* 水印_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "水印_4.png"; sourceTree = "<group>"; };
+		4F5480A7200AF64700DC3855 /* 水印_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "水印_5.png"; sourceTree = "<group>"; };
+		4F5480A8200AF64700DC3855 /* 水印_17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "水印_17.png"; sourceTree = "<group>"; };
+		4F5480A9200AF64700DC3855 /* 水印_13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "水印_13.png"; sourceTree = "<group>"; };
+		4F5480AA200AF64700DC3855 /* 水印_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "水印_1.png"; sourceTree = "<group>"; };
+		4F5480AB200AF64700DC3855 /* 水印_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "水印_0.png"; sourceTree = "<group>"; };
+		4F5480AC200AF64700DC3855 /* 水印_12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "水印_12.png"; sourceTree = "<group>"; };
+		4F5480AD200AF64700DC3855 /* 水印_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "水印_10.png"; sourceTree = "<group>"; };
+		4F5480AE200AF64700DC3855 /* 水印_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "水印_2.png"; sourceTree = "<group>"; };
+		4F5480AF200AF64700DC3855 /* 水印_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "水印_3.png"; sourceTree = "<group>"; };
+		4F5480B0200AF64700DC3855 /* 水印_11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "水印_11.png"; sourceTree = "<group>"; };
+		4F5480B1200AF64700DC3855 /* 水印_20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "水印_20.png"; sourceTree = "<group>"; };
+		4F5480B2200AF64700DC3855 /* 水印_21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "水印_21.png"; sourceTree = "<group>"; };
+		4F5480B3200AF64700DC3855 /* 水印_22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "水印_22.png"; sourceTree = "<group>"; };
+		4F5480B4200AF64700DC3855 /* 水印_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "水印_8.png"; sourceTree = "<group>"; };
+		4F5480B5200AF64700DC3855 /* 水印_9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "水印_9.png"; sourceTree = "<group>"; };
+		4F5480B6200AF64700DC3855 /* 水印_19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "水印_19.png"; sourceTree = "<group>"; };
+		4F5480B7200AF64700DC3855 /* 水印_18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "水印_18.png"; sourceTree = "<group>"; };
+		4F5480B8200AF64700DC3855 /* icon_load_gif@3x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "icon_load_gif@3x.gif"; sourceTree = "<group>"; };
+		4F5480B9200AF64700DC3855 /* icon_load_gif@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "icon_load_gif@2x.gif"; sourceTree = "<group>"; };
 		4F562B9B1FC0861400D8F25B /* NIMKitEmoticon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = NIMKitEmoticon.bundle; path = "Supporting Files/NIMKitEmoticon.bundle"; sourceTree = "<group>"; };
 		4F562B9C1FC0861400D8F25B /* NIMKitSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = NIMKitSettings.bundle; path = "Supporting Files/NIMKitSettings.bundle"; sourceTree = "<group>"; };
 		4F562B9E1FC0861500D8F25B /* BlizzardReg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BlizzardReg.ttf; sourceTree = "<group>"; };
@@ -1304,6 +1358,8 @@
 		4DCBD9341E7580E90039282D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4F54809C200AF63D00DC3855 /* live_mix_auido_example_1.mp3 */,
+				4F54809D200AF63D00DC3855 /* live_mix_auido_example_2.mp3 */,
 				4F562BBF1FC1C1D500D8F25B /* NIMDemoChartlet.bundle */,
 				4F562B9D1FC0861500D8F25B /* Files */,
 				4F562B9B1FC0861400D8F25B /* NIMKitEmoticon.bundle */,
@@ -2426,6 +2482,36 @@
 			path = Log;
 			sourceTree = "<group>";
 		};
+		4F5480A0200AF64700DC3855 /* 水印 */ = {
+			isa = PBXGroup;
+			children = (
+				4F5480A1200AF64700DC3855 /* 水印_15.png */,
+				4F5480A2200AF64700DC3855 /* 水印_7.png */,
+				4F5480A3200AF64700DC3855 /* 水印_6.png */,
+				4F5480A4200AF64700DC3855 /* 水印_14.png */,
+				4F5480A5200AF64700DC3855 /* 水印_16.png */,
+				4F5480A6200AF64700DC3855 /* 水印_4.png */,
+				4F5480A7200AF64700DC3855 /* 水印_5.png */,
+				4F5480A8200AF64700DC3855 /* 水印_17.png */,
+				4F5480A9200AF64700DC3855 /* 水印_13.png */,
+				4F5480AA200AF64700DC3855 /* 水印_1.png */,
+				4F5480AB200AF64700DC3855 /* 水印_0.png */,
+				4F5480AC200AF64700DC3855 /* 水印_12.png */,
+				4F5480AD200AF64700DC3855 /* 水印_10.png */,
+				4F5480AE200AF64700DC3855 /* 水印_2.png */,
+				4F5480AF200AF64700DC3855 /* 水印_3.png */,
+				4F5480B0200AF64700DC3855 /* 水印_11.png */,
+				4F5480B1200AF64700DC3855 /* 水印_20.png */,
+				4F5480B2200AF64700DC3855 /* 水印_21.png */,
+				4F5480B3200AF64700DC3855 /* 水印_22.png */,
+				4F5480B4200AF64700DC3855 /* 水印_8.png */,
+				4F5480B5200AF64700DC3855 /* 水印_9.png */,
+				4F5480B6200AF64700DC3855 /* 水印_19.png */,
+				4F5480B7200AF64700DC3855 /* 水印_18.png */,
+			);
+			path = "水印";
+			sourceTree = "<group>";
+		};
 		4F562B9D1FC0861500D8F25B /* Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -2440,6 +2526,9 @@
 		4F562BA11FC0861500D8F25B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4F5480A0200AF64700DC3855 /* 水印 */,
+				4F5480B9200AF64700DC3855 /* icon_load_gif@2x.gif */,
+				4F5480B8200AF64700DC3855 /* icon_load_gif@3x.gif */,
 				4F562BA21FC0861500D8F25B /* XMLTemplate.xml */,
 				4F562BA31FC0861500D8F25B /* Meeting */,
 			);
@@ -2572,15 +2661,22 @@
 			files = (
 				4DA4A9B21E9100560073D246 /* icon_app180@3x.png in Resources */,
 				4F0CD76C1FBB48A8001F6745 /* SPaySDKResource.bundle in Resources */,
+				4F5480BE200AF64800DC3855 /* 水印_16.png in Resources */,
 				4DA4A9B71E9100560073D246 /* icon_app87@3x.png in Resources */,
 				4DA4A9AF1E9100560073D246 /* icon_app.png in Resources */,
+				4F5480C7200AF64800DC3855 /* 水印_2.png in Resources */,
+				4F5480BC200AF64800DC3855 /* 水印_6.png in Resources */,
 				4DA4A9E51E9100560073D246 /* icon_wifi.png in Resources */,
 				4DA4A9A91E9100560073D246 /* btn_style_five_pressed.9.png in Resources */,
 				4F0CD7901FBB48A9001F6745 /* NTESSystemNotificationViewController.xib in Resources */,
+				4F5480BD200AF64800DC3855 /* 水印_14.png in Resources */,
 				4D197D0F1EA2115300AFBBF1 /* icon_mobile@2x.png in Resources */,
 				4DA4A9D31E9100560073D246 /* icon_main_realtime@2x.png in Resources */,
 				4DA4A9C21E9100560073D246 /* icon_main_datacurve@3x.png in Resources */,
+				4F5480BF200AF64800DC3855 /* 水印_4.png in Resources */,
+				4F5480C4200AF64800DC3855 /* 水印_0.png in Resources */,
 				4DA4A9AD1E9100560073D246 /* ico_back_down.png in Resources */,
+				4F54809E200AF63D00DC3855 /* live_mix_auido_example_1.mp3 in Resources */,
 				4DA4A9AA1E9100560073D246 /* db_gx.db in Resources */,
 				4DA4A9D01E9100560073D246 /* icon_main_forewarn_select@2x.png in Resources */,
 				4F562BB61FC0861500D8F25B /* video_connect_chat_tip_sender.aac in Resources */,
@@ -2594,11 +2690,16 @@
 				4DA4A9C81E9100560073D246 /* icon_main_device@3x.png in Resources */,
 				4DA4A9AE1E9100560073D246 /* ico_loginbg.png in Resources */,
 				4DA4A9B51E9100560073D246 /* icon_app76@2x.png in Resources */,
+				4F5480CE200AF64800DC3855 /* 水印_9.png in Resources */,
 				4D60CC791F3F522000D00729 /* jsbundle in Resources */,
+				4F5480C1200AF64800DC3855 /* 水印_17.png in Resources */,
 				4DC1D31B1F30D1C8008601C2 /* icon_home@2x.png in Resources */,
+				4F5480C0200AF64800DC3855 /* 水印_5.png in Resources */,
 				4DA4A9E11E9100560073D246 /* icon_start_ipad2x.png in Resources */,
 				4F562BB81FC0861500D8F25B /* video_chat_tip_sender.aac in Resources */,
+				4F5480C2200AF64800DC3855 /* 水印_13.png in Resources */,
 				4DA4A9DF1E9100560073D246 /* icon_start_ios8@3x.png in Resources */,
+				4F5480C6200AF64800DC3855 /* 水印_10.png in Resources */,
 				4DA4A9B41E9100560073D246 /* icon_app76.png in Resources */,
 				4DCBD9441E7580E90039282D /* LaunchScreen.storyboard in Resources */,
 				4F0CD8131FBB48A9001F6745 /* NTESTeamMeetingCallingViewController.xib in Resources */,
@@ -2609,21 +2710,27 @@
 				4D197D101EA2115300AFBBF1 /* icon_vertify.png in Resources */,
 				4F562BC01FC1C1D500D8F25B /* NIMDemoChartlet.bundle in Resources */,
 				4DA4A9BD1E9100560073D246 /* icon_login_unrem.png in Resources */,
+				4F5480BB200AF64800DC3855 /* 水印_7.png in Resources */,
 				4F0CD78F1FBB48A9001F6745 /* NTESCustomSysNotificationViewController.xib in Resources */,
 				4DA4A9A51E9100560073D246 /* btn_login.png in Resources */,
 				4DA4A9D61E9100560073D246 /* icon_main_realtime_select@2x.png in Resources */,
 				4F0CD7F81FBB48A9001F6745 /* NTESVideoChatViewController.xib in Resources */,
 				4DA4A9BB1E9100560073D246 /* icon_login_rem.png in Resources */,
+				4F5480CB200AF64800DC3855 /* 水印_21.png in Resources */,
 				4DA4A9DA1E9100560073D246 /* icon_set_back.png in Resources */,
 				4F0CD7E61FBB48A9001F6745 /* NTESWhiteboardViewController.xib in Resources */,
+				4F5480C3200AF64800DC3855 /* 水印_1.png in Resources */,
 				4F0CD7C11FBB48A9001F6745 /* NTESNetDetectViewController.xib in Resources */,
 				4DA4A9E81E9100560073D246 /* online.png in Resources */,
 				4F562BB01FC0861500D8F25B /* NIMKitSettings.bundle in Resources */,
 				4DA4A9CF1E9100560073D246 /* icon_main_forewarn_select.png in Resources */,
+				4F5480CD200AF64800DC3855 /* 水印_8.png in Resources */,
 				4DA4A9D71E9100560073D246 /* icon_main_realtime_select@3x.png in Resources */,
 				4F0CD7681FBB48A8001F6745 /* AlipaySDK.bundle in Resources */,
 				4DA4A9DE1E9100560073D246 /* icon_start_ios8@2x.png in Resources */,
+				4F5480CC200AF64800DC3855 /* 水印_22.png in Resources */,
 				4DA4A9D81E9100560073D246 /* icon_nomal.png in Resources */,
+				4F5480CA200AF64800DC3855 /* 水印_20.png in Resources */,
 				4F0CD7CF1FBB48A9001F6745 /* NTESRegisterViewController.xib in Resources */,
 				4F562BBD1FC0861500D8F25B /* video_chat_push.mp3 in Resources */,
 				4F0CD7911FBB48A9001F6745 /* NTESSystemNotificationCell.xib in Resources */,
@@ -2642,6 +2749,7 @@
 				4DA4A9E01E9100560073D246 /* icon_start_ipad1x.png in Resources */,
 				4F0CD7E41FBB48A9001F6745 /* NTESVideoViewController.xib in Resources */,
 				4DC1D31F1F30D1C8008601C2 /* icon_see_selected@2x.png in Resources */,
+				4F5480C8200AF64800DC3855 /* 水印_3.png in Resources */,
 				4F0CD7BB1FBB48A9001F6745 /* NTESNoDisturbSettingViewController.xib in Resources */,
 				4DA4A9B81E9100560073D246 /* icon_conresult_line.png in Resources */,
 				4DA4A9C11E9100560073D246 /* icon_main_datacurve@2x.png in Resources */,
@@ -2652,12 +2760,15 @@
 				4DA4A9DB1E9100560073D246 /* icon_start.png in Resources */,
 				4DC1D3181F30D1C8008601C2 /* icon_cources_selected@2x.png in Resources */,
 				4F562BB41FC0861500D8F25B /* XMLTemplate.xml in Resources */,
+				4F5480C9200AF64800DC3855 /* 水印_11.png in Resources */,
 				4DA4A9C01E9100560073D246 /* icon_main_datacurve.png in Resources */,
 				4F0CD7C01FBB48A9001F6745 /* NTESSettingViewController.xib in Resources */,
 				4DDDDA7C1F2798F500A023E3 /* bg_login.png in Resources */,
+				4F5480D1200AF64800DC3855 /* icon_load_gif@3x.gif in Resources */,
 				4DA4A9E21E9100560073D246 /* icon_start_Retina4@2x.png in Resources */,
 				4DA4A9C51E9100560073D246 /* icon_main_datacurve_select@3x.png in Resources */,
 				4DA4A9E41E9100560073D246 /* icon_warn.png in Resources */,
+				4F5480BA200AF64800DC3855 /* 水印_15.png in Resources */,
 				4DC1D3201F30D1C8008601C2 /* icon_see@2x.png in Resources */,
 				4F5480872002749000DC3855 /* NTESLogViewController.xib in Resources */,
 				4F0CD7E91FBB48A9001F6745 /* NTESFileTransSelectViewController.xib in Resources */,
@@ -2685,10 +2796,13 @@
 				4D609E241F4857F80073D500 /* icon_back@2x.png in Resources */,
 				4F0CD7B51FBB48A9001F6745 /* NTESUserInfoSettingViewController.xib in Resources */,
 				4F562BB31FC0861500D8F25B /* SetupOSX.mpq in Resources */,
+				4F5480D2200AF64800DC3855 /* icon_load_gif@2x.gif in Resources */,
 				4DA4A9CD1E9100560073D246 /* icon_main_forewarn@2x.png in Resources */,
 				4F562BAF1FC0861500D8F25B /* NIMKitEmoticon.bundle in Resources */,
 				4DCBD93F1E7580E90039282D /* Main.storyboard in Resources */,
 				4DA4A9BA1E9100560073D246 /* icon_login_pwd.png in Resources */,
+				4F5480D0200AF64800DC3855 /* 水印_18.png in Resources */,
+				4F5480C5200AF64800DC3855 /* 水印_12.png in Resources */,
 				4DA4A9E71E9100560073D246 /* marker2.png in Resources */,
 				4F0CD7F61FBB48A9001F6745 /* NTESAudioChatViewController.xib in Resources */,
 				4DC1D3231F30D6C2008601C2 /* icon_me_selected@2x.png in Resources */,
@@ -2703,12 +2817,14 @@
 				4DA4A9C71E9100560073D246 /* icon_main_device@2x.png in Resources */,
 				4DA4A9C91E9100560073D246 /* icon_main_device_select.png in Resources */,
 				4F0CD7741FBB48A8001F6745 /* JResource.bundle in Resources */,
+				4F5480CF200AF64800DC3855 /* 水印_19.png in Resources */,
 				4DA4A9CC1E9100560073D246 /* icon_main_forewarn.png in Resources */,
 				4F562BB91FC0861500D8F25B /* video_chat_tip_HangUp.aac in Resources */,
 				4F0CD7BF1FBB48A9001F6745 /* NTESAboutViewController.xib in Resources */,
 				4DA4A9A71E9100560073D246 /* btn_style_five_focused.9.png in Resources */,
 				4DA4A9B91E9100560073D246 /* icon_edit_bg.png in Resources */,
 				4F54809B2003CA2600DC3855 /* NTESLogViewController.xib in Resources */,
+				4F54809F200AF63D00DC3855 /* live_mix_auido_example_2.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

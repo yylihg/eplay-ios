@@ -19,6 +19,7 @@
 #define Message_Font_Size   14        // 普通聊天文字大小
 #define Notification_Font_Size   10   // 通知文字大小
 #define Chatroom_Message_Font_Size 16 // 聊天室聊天文字大小
+#define Chatroom_Message_Font [UIFont boldSystemFontOfSize:14] // 聊天室聊天文字字体
 
 
 #define SuppressPerformSelectorLeakWarning(Stuff) \
@@ -59,3 +60,4 @@ dispatch_async(dispatch_get_main_queue(), block);\
 
 
 #endif
+
