@@ -9,7 +9,6 @@
 #import "UIView+NTES.h"
 #import "SVProgressHUD.h"
 #import <objc/runtime.h>
-
 @implementation UIView (NTES)
 
 - (CGFloat)left {
@@ -155,6 +154,18 @@
     return nil;
 }
 
+- (void)toast:(NSString *)title image:(UIImage *)image
+{
+    [SVProgressHUD setBackgroundColor:UIColorFromRGBA(0x0,.5f)];
+    [SVProgressHUD setForegroundColor:[UIColor whiteColor]];
+    [SVProgressHUD showImage:image status:title maskType:SVProgressHUDMaskTypeClear];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.95 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [SVProgressHUD setBackgroundColor:[UIColor whiteColor]];
+        [SVProgressHUD setForegroundColor:[UIColor blackColor]];
+    });
+}
+
+
 @end
 
 
@@ -224,13 +235,13 @@ static char PresentingViewAddress;  //正在Present其他视图的view
     moveAnimation.toValue    = [NSValue valueWithCGPoint:self.window.center];
     
     CAAnimationGroup *group = [CAAnimationGroup animation];
-    group.beginTime				= CACurrentMediaTime();
-    group.duration				= AnimateDuartion;
-    group.animations			= [NSArray arrayWithObjects:scaleAnimation,moveAnimation,nil];
-    group.timingFunction		= [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
-    group.fillMode				= kCAFillModeForwards;
-    group.removedOnCompletion	= NO;
-    group.autoreverses			= NO;
+    group.beginTime                = CACurrentMediaTime();
+    group.duration                = AnimateDuartion;
+    group.animations            = [NSArray arrayWithObjects:scaleAnimation,moveAnimation,nil];
+    group.timingFunction        = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+    group.fillMode                = kCAFillModeForwards;
+    group.removedOnCompletion    = NO;
+    group.autoreverses            = NO;
     
     [self hideAllSubView:view];
     
@@ -244,14 +255,6 @@ static char PresentingViewAddress;  //正在Present其他视图的view
         if (complete) {
             complete();
         }
-- (void)toast:(NSString *)title image:(UIImage *)image
-{
-    [SVProgressHUD setBackgroundColor:UIColorFromRGBA(0x0,.5f)];
-    [SVProgressHUD setForegroundColor:[UIColor whiteColor]];
-    [SVProgressHUD showImage:image status:title maskType:SVProgressHUDMaskTypeClear];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.95 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [SVProgressHUD setBackgroundColor:[UIColor whiteColor]];
-        [SVProgressHUD setForegroundColor:[UIColor blackColor]];
     });
     
 }
@@ -328,3 +331,4 @@ static char *HideViewsAddress = "hideViewsAddress";
 }
 
 @end
+
