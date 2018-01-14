@@ -10,6 +10,19 @@
 
 @interface NTESUserUtil : NSObject
 
++ (NSString *)showName:(NSString *)userId
+           withMessage:(NIMMessage *)message;
+
 + (NSString *)genderString:(NIMUserGender)gender;
+
++ (void)requestMediaCapturerAccess:(NIMNetCallMediaType)type handler:(void (^)(NSError *))handler;
+
++ (NSString *)meetingName:(NIMChatroom *)chatroom;
+
++ (NIMNetCallOption *)fillNetCallOption:(NIMNetCallMeeting *)meeting;
+
++ (NIMNetCallVideoCaptureParam *)videoCaptureParam;
+
++ (NIMNetCallVideoQuality)defaultVideoQuality;
 
 @end

@@ -17,7 +17,7 @@
 
 @interface NTESDevice ()
 
-@property (nonatomic,copy)      NSDictionary    *networkTypes;
+@property (nonatomic,strong)    NSDictionary    *networkTypes;
 
 @end
 
@@ -57,7 +57,6 @@
                           CTRadioAccessTechnologyeHRPD:@(NTESNetworkType3G),
                           CTRadioAccessTechnologyLTE:@(NTESNetworkType4G),
                      };
-    
 }
 
 
@@ -80,6 +79,12 @@
 
 - (BOOL)isInBackground{
     return [[UIApplication sharedApplication] applicationState] != UIApplicationStateActive;
+}
+
+- (BOOL)canConnectInternet
+{
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    return [reachability isReachable];
 }
 
 - (NTESNetworkType)currentNetworkType{

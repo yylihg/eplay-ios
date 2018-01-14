@@ -8,6 +8,7 @@
 
 #import "NTESService.h"
 #import "NTESSessionUtil.h"
+#import "NTESLiveUtil.h"
 
 #pragma mark - NIMServiceManagerImpl
 @interface NIMServiceManagerImpl : NSObject
@@ -47,6 +48,7 @@
     return singleton;
 }
 
+
 - (void)callSingletonSelector: (SEL)selecotr
 {
     NSArray *array = [_singletons allValues];
@@ -80,6 +82,13 @@
 {
     DDLogDebug(@"NIMService %@ Started", self);
 }
+
+- (void)stop
+{
+    DDLogDebug(@"NIMService %@ stop", self);
+    [[NTESServiceManager sharedManager].core.singletons removeObjectForKey:NSStringFromClass([self class])];
+}
+
 @end
 
 #pragma mark - NIMServiceManager
@@ -140,6 +149,7 @@
     _core = nil;
     [_lock unlock];
 }
+
 
 - (id)singletonByClass: (Class)singletonClass
 {

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+#define VideoExt   (@"mp4")
 #define ImageExt   (@"jpg")
 
 

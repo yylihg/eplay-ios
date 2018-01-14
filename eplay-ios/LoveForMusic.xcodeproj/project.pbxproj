@@ -366,6 +366,12 @@
 		4F5480882002749000DC3855 /* NTESLogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5480822002749000DC3855 /* NTESLogViewController.m */; };
 		4F5480892002749000DC3855 /* NTESLogUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5480832002749000DC3855 /* NTESLogUploader.m */; };
 		4F54808A2002749000DC3855 /* NTESLogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5480842002749000DC3855 /* NTESLogManager.m */; };
+		4F5480962003CA2600DC3855 /* NTESLogUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F54808D2003CA2200DC3855 /* NTESLogUploader.m */; };
+		4F5480972003CA2600DC3855 /* NTESDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F54808E2003CA2200DC3855 /* NTESDataManager.m */; };
+		4F5480982003CA2600DC3855 /* NTESLiveUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F54808F2003CA2500DC3855 /* NTESLiveUtil.m */; };
+		4F5480992003CA2600DC3855 /* NTESLogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5480902003CA2500DC3855 /* NTESLogManager.m */; };
+		4F54809A2003CA2600DC3855 /* NTESLogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5480922003CA2500DC3855 /* NTESLogViewController.m */; };
+		4F54809B2003CA2600DC3855 /* NTESLogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F5480952003CA2600DC3855 /* NTESLogViewController.xib */; };
 		4F562BAF1FC0861500D8F25B /* NIMKitEmoticon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4F562B9B1FC0861400D8F25B /* NIMKitEmoticon.bundle */; };
 		4F562BB01FC0861500D8F25B /* NIMKitSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4F562B9C1FC0861400D8F25B /* NIMKitSettings.bundle */; };
 		4F562BB11FC0861500D8F25B /* BlizzardReg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F562B9E1FC0861500D8F25B /* BlizzardReg.ttf */; };
@@ -1002,6 +1008,17 @@
 		4F5480842002749000DC3855 /* NTESLogManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTESLogManager.m; sourceTree = "<group>"; };
 		4F5480852002749000DC3855 /* NTESLogUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTESLogUploader.h; sourceTree = "<group>"; };
 		4F5480862002749000DC3855 /* NTESLogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTESLogViewController.h; sourceTree = "<group>"; };
+		4F54808B2003CA2100DC3855 /* NTESDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTESDataManager.h; sourceTree = "<group>"; };
+		4F54808C2003CA2100DC3855 /* NTESLogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTESLogManager.h; sourceTree = "<group>"; };
+		4F54808D2003CA2200DC3855 /* NTESLogUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTESLogUploader.m; sourceTree = "<group>"; };
+		4F54808E2003CA2200DC3855 /* NTESDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTESDataManager.m; sourceTree = "<group>"; };
+		4F54808F2003CA2500DC3855 /* NTESLiveUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTESLiveUtil.m; sourceTree = "<group>"; };
+		4F5480902003CA2500DC3855 /* NTESLogManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTESLogManager.m; sourceTree = "<group>"; };
+		4F5480912003CA2500DC3855 /* NTESLiveUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTESLiveUtil.h; sourceTree = "<group>"; };
+		4F5480922003CA2500DC3855 /* NTESLogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTESLogViewController.m; sourceTree = "<group>"; };
+		4F5480932003CA2600DC3855 /* NTESLogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTESLogViewController.h; sourceTree = "<group>"; };
+		4F5480942003CA2600DC3855 /* NTESLogUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTESLogUploader.h; sourceTree = "<group>"; };
+		4F5480952003CA2600DC3855 /* NTESLogViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NTESLogViewController.xib; sourceTree = "<group>"; };
 		4F562B9B1FC0861400D8F25B /* NIMKitEmoticon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = NIMKitEmoticon.bundle; path = "Supporting Files/NIMKitEmoticon.bundle"; sourceTree = "<group>"; };
 		4F562B9C1FC0861400D8F25B /* NIMKitSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = NIMKitSettings.bundle; path = "Supporting Files/NIMKitSettings.bundle"; sourceTree = "<group>"; };
 		4F562B9E1FC0861500D8F25B /* BlizzardReg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BlizzardReg.ttf; sourceTree = "<group>"; };
@@ -2247,6 +2264,17 @@
 		4F0CD7161FBB48A8001F6745 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				4F54808B2003CA2100DC3855 /* NTESDataManager.h */,
+				4F54808E2003CA2200DC3855 /* NTESDataManager.m */,
+				4F5480912003CA2500DC3855 /* NTESLiveUtil.h */,
+				4F54808F2003CA2500DC3855 /* NTESLiveUtil.m */,
+				4F54808C2003CA2100DC3855 /* NTESLogManager.h */,
+				4F5480902003CA2500DC3855 /* NTESLogManager.m */,
+				4F5480942003CA2600DC3855 /* NTESLogUploader.h */,
+				4F54808D2003CA2200DC3855 /* NTESLogUploader.m */,
+				4F5480932003CA2600DC3855 /* NTESLogViewController.h */,
+				4F5480922003CA2500DC3855 /* NTESLogViewController.m */,
+				4F5480952003CA2600DC3855 /* NTESLogViewController.xib */,
 				4F0CD7171FBB48A8001F6745 /* NTESUserUtil.m */,
 				4F0CD7181FBB48A8001F6745 /* NTESFileLocationHelper.h */,
 				4F0CD7191FBB48A8001F6745 /* NTESService.h */,
@@ -2680,6 +2708,7 @@
 				4F0CD7BF1FBB48A9001F6745 /* NTESAboutViewController.xib in Resources */,
 				4DA4A9A71E9100560073D246 /* btn_style_five_focused.9.png in Resources */,
 				4DA4A9B91E9100560073D246 /* icon_edit_bg.png in Resources */,
+				4F54809B2003CA2600DC3855 /* NTESLogViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2756,6 +2785,7 @@
 				4F0CD7F01FBB48A9001F6745 /* NTESSessionLocalHistoryViewController.m in Sources */,
 				4F0CD7B71FBB48A9001F6745 /* NTESSignSettingViewController.m in Sources */,
 				4F0CD79A1FBB48A9001F6745 /* NTESChatroomMemberListViewController.m in Sources */,
+				4F5480992003CA2600DC3855 /* NTESLogManager.m in Sources */,
 				4DCBD93C1E7580E90039282D /* ViewController.m in Sources */,
 				4F0CD77A1FBB48A9001F6745 /* NTESUserListCell.m in Sources */,
 				4F0CD83B1FBB48A9001F6745 /* NTESMainTabController.m in Sources */,
@@ -2783,6 +2813,7 @@
 				4F0CD7FF1FBB48A9001F6745 /* NTESTeamMeetingCollectionViewCell.m in Sources */,
 				4F0CD8171FBB48A9001F6745 /* NTESSessionRemoteHistoryViewController.m in Sources */,
 				4D3812291E93B10A0029E6B5 /* MainMenuModel.m in Sources */,
+				4F5480962003CA2600DC3855 /* NTESLogUploader.m in Sources */,
 				4F0CD8351FBB48A9001F6745 /* UINavigationBar+Swizzling.m in Sources */,
 				4F0CD7CE1FBB48A9001F6745 /* NTESLoginViewController.m in Sources */,
 				4F0CD81A1FBB48A9001F6745 /* UIView+NTES.m in Sources */,
@@ -2804,6 +2835,7 @@
 				4F0CD8051FBB48A9001F6745 /* common.c in Sources */,
 				4F0CD7E81FBB48A9001F6745 /* NTESWhiteboardDrawView.m in Sources */,
 				4F0CD7AC1FBB48A9001F6745 /* NTESTextHeaderView.m in Sources */,
+				4F5480982003CA2600DC3855 /* NTESLiveUtil.m in Sources */,
 				4F0CD77C1FBB48A9001F6745 /* NTESContactUtilCell.m in Sources */,
 				4D64916E1E9133B5009860E3 /* UIView+SDExtension.m in Sources */,
 				4F0CD81C1FBB48A9001F6745 /* UIResponder+NTESFirstResponder.m in Sources */,
@@ -2868,6 +2900,7 @@
 				4F0CD8061FBB48A9001F6745 /* mvp.vsh.c in Sources */,
 				4F54808A2002749000DC3855 /* NTESLogManager.m in Sources */,
 				4F0CD7A71FBB48A9001F6745 /* NTESChatroomMessageDataProvider.m in Sources */,
+				4F5480972003CA2600DC3855 /* NTESDataManager.m in Sources */,
 				4F0CD7891FBB48A9001F6745 /* NTESSearchTeamViewController.m in Sources */,
 				4F0CD7761FBB48A8001F6745 /* NTESContactDataMember.m in Sources */,
 				4D8424321EB7724B00724706 /* ReactModule.m in Sources */,
@@ -2917,6 +2950,7 @@
 				4F0CD8331FBB48A9001F6745 /* NTESSpellingCenter.m in Sources */,
 				4F0CD8231FBB48A9001F6745 /* NSDictionary+NTESJson.m in Sources */,
 				4F0CD7CB1FBB48A9001F6745 /* NTESLoginManager.m in Sources */,
+				4F54809A2003CA2600DC3855 /* NTESLogViewController.m in Sources */,
 				4F0CD8071FBB48A9001F6745 /* renderer_rgb.c in Sources */,
 				4F0CD8461FBB48A9001F6745 /* NTESDemoService.m in Sources */,
 				4F0CD82F1FBB48A9001F6745 /* NTESBundleSetting.m in Sources */,

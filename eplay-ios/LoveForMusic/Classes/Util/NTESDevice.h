@@ -29,7 +29,7 @@ typedef NS_ENUM(NSUInteger,NTESNetworkType) {
 //App状态
 - (BOOL)isUsingWifi;
 - (BOOL)isInBackground;
-
+- (BOOL)canConnectInternet;
 - (NTESNetworkType)currentNetworkType;
 - (NSString *)networkStatus:(NTESNetworkType)networkType;
 

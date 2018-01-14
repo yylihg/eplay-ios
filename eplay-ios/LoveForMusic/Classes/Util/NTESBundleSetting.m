@@ -355,4 +355,52 @@
                 [self enableSyncWhenFetchRemoteMessages]
             ];
 }
+
+
+- (NELPBufferStrategy)preferredBufferStrategy
+{
+    NELPBufferStrategy strategy = (NELPBufferStrategy)[[[NSUserDefaults standardUserDefaults] objectForKey:@"enabled_preferred_buffer_strategy"] integerValue];
+    return strategy;
+}
+
+- (BOOL)bypassStreamingServerRecord
+{
+    id setting = [[NSUserDefaults standardUserDefaults] objectForKey:@"bypass_server_record"];
+    
+    if (setting) {
+        return [setting boolValue];
+    }
+    else {
+        return NO;
+    }
+}
+
+- (NIMNetCallVideoCaptureFormat)videoCaptureFormat
+{
+    id setting = [[NSUserDefaults standardUserDefaults] objectForKey:@"video_capture_format"];
+    
+    return setting ? [setting integerValue] : NIMNetCallVideoCaptureFormat420f;
+}
+
+- (NSUInteger)bypassVideoMixMode
+{
+    id setting = [[NSUserDefaults standardUserDefaults] objectForKey:@"bypass_mix_mode"];
+    
+    if (setting) {
+        return [setting unsignedIntegerValue];
+    }
+    else {
+        return NIMNetCallBypassStreamingMixModeFloatingRightVertical;
+    }
+}
+
+- (NSString *)bypassVideoMixCustomLayoutConfig
+{
+    
+    id setting = [[NSUserDefaults standardUserDefaults] objectForKey:@"bypass_mix_layout_config"];
+    
+    return setting;
+}
+
+
 @end
