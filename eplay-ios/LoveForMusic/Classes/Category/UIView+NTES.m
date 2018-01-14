@@ -7,7 +7,9 @@
 //
 
 #import "UIView+NTES.h"
+#import "SVProgressHUD.h"
 #import <objc/runtime.h>
+
 @implementation UIView (NTES)
 
 - (CGFloat)left {
@@ -242,6 +244,14 @@ static char PresentingViewAddress;  //正在Present其他视图的view
         if (complete) {
             complete();
         }
+- (void)toast:(NSString *)title image:(UIImage *)image
+{
+    [SVProgressHUD setBackgroundColor:UIColorFromRGBA(0x0,.5f)];
+    [SVProgressHUD setForegroundColor:[UIColor whiteColor]];
+    [SVProgressHUD showImage:image status:title maskType:SVProgressHUDMaskTypeClear];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.95 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [SVProgressHUD setBackgroundColor:[UIColor whiteColor]];
+        [SVProgressHUD setForegroundColor:[UIColor blackColor]];
     });
     
 }

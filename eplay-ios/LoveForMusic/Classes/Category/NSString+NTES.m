@@ -8,8 +8,6 @@
 
 #import "NSString+NTES.h"
 #import <CommonCrypto/CommonDigest.h>
-
-
 @implementation NSString (NTES)
 
 - (CGSize)stringSizeWithFont:(UIFont *)font{
@@ -55,8 +53,17 @@
 {
     //demo直接使用username作为account，md5(password)作为token
     //接入应用开发需要根据自己的实际情况来获取 account和token
-    return [[NIMSDK sharedSDK] isUsingDemoAppKey] ? [self MD5String] : self;
+    return [self MD5String];
 }
 
-
+- (id)jsonObject
+{
+    NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding];
+    if (data) {
+        id object = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        return object;
+    }
+    return nil;
+}
+    
 @end

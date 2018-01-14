@@ -16,6 +16,7 @@ static char kUIAlertViewBlockAddress;
 {
     self.delegate = self;
     objc_setAssociatedObject(self,&kUIAlertViewBlockAddress,block,OBJC_ASSOCIATION_COPY);
+
     [self show];
 }
 

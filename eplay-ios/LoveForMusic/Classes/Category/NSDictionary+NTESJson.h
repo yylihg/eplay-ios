@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface NSDictionary (NTESJson)
+- (NSString *)jsonBody;
+
 - (NSString *)jsonString: (NSString *)key;
 
 - (NSDictionary *)jsonDict: (NSString *)key;

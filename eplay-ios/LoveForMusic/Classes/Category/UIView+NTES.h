@@ -73,6 +73,7 @@
 //找到自己的vc
 - (UIViewController *)viewController;
 
+- (void)toast:(NSString *)title image:(UIImage *)image;
 
 @end
 

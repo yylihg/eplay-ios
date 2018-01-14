@@ -20,4 +20,6 @@
 
 - (NSString *)tokenByPassword;
 
+- (id)jsonObject;
+
 @end

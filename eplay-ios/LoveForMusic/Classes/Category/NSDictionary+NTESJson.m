@@ -9,6 +9,15 @@
 
 @implementation NSDictionary (NTESJson)
 
+- (NSString *)jsonBody
+{
+    NSData *data = [NSJSONSerialization dataWithJSONObject:self options:0 error:nil];
+    if (data) {
+        return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    }
+    return nil;
+}
+
 - (NSString *)jsonString: (NSString *)key
 {
     id object = [self objectForKey:key];
