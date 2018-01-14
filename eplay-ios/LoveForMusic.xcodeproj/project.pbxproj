@@ -399,6 +399,7 @@
 		4F5480D0200AF64800DC3855 /* 水印_18.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5480B7200AF64700DC3855 /* 水印_18.png */; };
 		4F5480D1200AF64800DC3855 /* icon_load_gif@3x.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4F5480B8200AF64700DC3855 /* icon_load_gif@3x.gif */; };
 		4F5480D2200AF64800DC3855 /* icon_load_gif@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4F5480B9200AF64700DC3855 /* icon_load_gif@2x.gif */; };
+		4F5480D4200AF7B800DC3855 /* Presents.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F5480D3200AF7B800DC3855 /* Presents.plist */; };
 		4F562BAF1FC0861500D8F25B /* NIMKitEmoticon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4F562B9B1FC0861400D8F25B /* NIMKitEmoticon.bundle */; };
 		4F562BB01FC0861500D8F25B /* NIMKitSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4F562B9C1FC0861400D8F25B /* NIMKitSettings.bundle */; };
 		4F562BB11FC0861500D8F25B /* BlizzardReg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F562B9E1FC0861500D8F25B /* BlizzardReg.ttf */; };
@@ -1073,6 +1074,7 @@
 		4F5480B7200AF64700DC3855 /* 水印_18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "水印_18.png"; sourceTree = "<group>"; };
 		4F5480B8200AF64700DC3855 /* icon_load_gif@3x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "icon_load_gif@3x.gif"; sourceTree = "<group>"; };
 		4F5480B9200AF64700DC3855 /* icon_load_gif@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "icon_load_gif@2x.gif"; sourceTree = "<group>"; };
+		4F5480D3200AF7B800DC3855 /* Presents.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Presents.plist; sourceTree = "<group>"; };
 		4F562B9B1FC0861400D8F25B /* NIMKitEmoticon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = NIMKitEmoticon.bundle; path = "Supporting Files/NIMKitEmoticon.bundle"; sourceTree = "<group>"; };
 		4F562B9C1FC0861400D8F25B /* NIMKitSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = NIMKitSettings.bundle; path = "Supporting Files/NIMKitSettings.bundle"; sourceTree = "<group>"; };
 		4F562B9E1FC0861500D8F25B /* BlizzardReg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BlizzardReg.ttf; sourceTree = "<group>"; };
@@ -1332,6 +1334,7 @@
 		4DCBD9331E7580E90039282D /* LoveForMusic */ = {
 			isa = PBXGroup;
 			children = (
+				4F5480D3200AF7B800DC3855 /* Presents.plist */,
 				4F0CD55C1FBB48A8001F6745 /* Classes */,
 				4D60CC781F3F522000D00729 /* jsbundle */,
 				4D6491A31E923F10009860E3 /* project */,
@@ -2799,6 +2802,7 @@
 				4F5480D2200AF64800DC3855 /* icon_load_gif@2x.gif in Resources */,
 				4DA4A9CD1E9100560073D246 /* icon_main_forewarn@2x.png in Resources */,
 				4F562BAF1FC0861500D8F25B /* NIMKitEmoticon.bundle in Resources */,
+				4F5480D4200AF7B800DC3855 /* Presents.plist in Resources */,
 				4DCBD93F1E7580E90039282D /* Main.storyboard in Resources */,
 				4DA4A9BA1E9100560073D246 /* icon_login_pwd.png in Resources */,
 				4F5480D0200AF64800DC3855 /* 水印_18.png in Resources */,
