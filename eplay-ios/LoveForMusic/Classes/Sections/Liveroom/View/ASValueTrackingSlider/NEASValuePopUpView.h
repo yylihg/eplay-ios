@@ -1,5 +1,5 @@
 //
-//  ASValuePopUpView.h
+//  NEASValuePopUpView.h
 //  ValueTrackingSlider
 //
 //  Created by Alan Skipp on 27/03/2014.
@@ -7,21 +7,21 @@
 //
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// This UIView subclass is used internally by ASValueTrackingSlider
-// The public API is declared in ASValueTrackingSlider.h
+// This UIView subclass is used internally by NEASValueTrackingSlider
+// The public API is declared in NEASValueTrackingSlider.h
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 #import <UIKit/UIKit.h>
 
-@protocol ASValuePopUpViewDelegate <NSObject>
+@protocol NEASValuePopUpViewDelegate <NSObject>
 - (CGFloat)currentValueOffset; //expects value in the range 0.0 - 1.0
 - (void)colorAnimationDidStart;
 - (void)popUpViewDidHide;
 @end
 
-@interface ASValuePopUpView : UIView
+@interface NEASValuePopUpView : UIView
 
-@property (weak, nonatomic) id <ASValuePopUpViewDelegate> delegate;
+@property (weak, nonatomic) id <NEASValuePopUpViewDelegate> delegate;
 @property (nonatomic) CGFloat cornerRadius;
 
 - (UIColor *)color;

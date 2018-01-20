@@ -2,7 +2,7 @@
 //  NIMAVChatDefs.h
 //  NIMAVChat
 //
-//  Created by fenric on 16/10/28.
+//  Created by Netease on 16/10/28.
 //  Copyright © 2016年 Netease. All rights reserved.
 //
 
@@ -420,7 +420,7 @@ typedef NS_ENUM(NSInteger, NIMAVLocalErrorCode) {
 
 /**
  *  服务器错误码 （AV） Doamin: NIMRemoteErrorDomain
- *  @discussion 更多错误详见 http://dev.netease.im/docs?doc=nim_status_code#服务器端状态码
+ *  @discussion 更多错误详见 [服务器端状态码](http://dev.netease.im/docs?doc=nim_status_code#服务器端状态码)
  */
 typedef NS_ENUM(NSInteger, NIMAVRemoteErrorCode) {
     /**

@@ -2,7 +2,7 @@
 //  NIMNetCallVideoCaptureParam.h
 //  NIMAVChat
 //
-//  Created by fenric on 17/3/24.
+//  Created by Netease on 17/3/24.
 //  Copyright © 2017年 Netease. All rights reserved.
 //
 

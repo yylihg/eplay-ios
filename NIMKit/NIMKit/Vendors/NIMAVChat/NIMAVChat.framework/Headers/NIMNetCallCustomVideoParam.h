@@ -2,7 +2,7 @@
 //  NIMNetCallCustomVideoParam.h
 //  NIMAVChat
 //
-//  Created by Simon Blue on 2017/7/17.
+//  Created by Netease on 2017/7/17.
 //  Copyright © 2017年 Netease. All rights reserved.
 //
 

@@ -116,7 +116,7 @@ NTES_USE_CLEAR_BAR
 
 - (void)onTouchLogout:(id)sender
 {
-    [[NTESLoginManager sharedManager] setCurrentNTESLoginData:nil];
+    [[NTESLoginManager sharedManager] setCurrentLoginData:nil];
     [[NTESServiceManager sharedManager] destory];
     [[NIMSDK sharedSDK].loginManager logout:^(NSError *error) {
         [[NTESPageContext sharedInstance] setupMainViewController];

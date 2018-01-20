@@ -8,7 +8,7 @@
 
 #import "NTESFilterMenuBar.h"
 #import "NTESMenuCell.h"
-#import "ASValueTrackingSlider.h"
+#import "NEASValueTrackingSlider.h"
 #import "UIView+NTES.h"
 
 const CGFloat gFilterMenuRowsEveryPage = 4;
@@ -44,8 +44,8 @@ const CGFloat defaultConstrastSlidervalue = 1.0;
 
 @property (nonatomic) float oldsmoothSlidervalue;
 
-@property (strong, nonatomic)  ASValueTrackingSlider *contrastSlider; //锐度强度
-@property (strong, nonatomic)  ASValueTrackingSlider *smoothSlider; //磨皮强度
+@property (strong, nonatomic)  NEASValueTrackingSlider *contrastSlider; //锐度强度
+@property (strong, nonatomic)  NEASValueTrackingSlider *smoothSlider; //磨皮强度
 
 @property (nonatomic)  BOOL showSlider;
 
@@ -208,7 +208,7 @@ const CGFloat defaultConstrastSlidervalue = 1.0;
     return 15;
 }
 
-- (void)contrastSliderValueChanged:(ASValueTrackingSlider *)slider
+- (void)contrastSliderValueChanged:(NEASValueTrackingSlider *)slider
 {
     
     if (_contrastChangedBlock) {
@@ -216,7 +216,7 @@ const CGFloat defaultConstrastSlidervalue = 1.0;
     }
 }
 
-- (void)smoothSliderValueChanged:(ASValueTrackingSlider *)slider
+- (void)smoothSliderValueChanged:(NEASValueTrackingSlider *)slider
 {
     if (_smoothChangedBlock) {
         _smoothChangedBlock(slider.value);
@@ -308,11 +308,11 @@ const CGFloat defaultConstrastSlidervalue = 1.0;
     return _smoothSliderLabel;
 }
 
-- (ASValueTrackingSlider *)contrastSlider
+- (NEASValueTrackingSlider *)contrastSlider
 {
     if (!_contrastSlider)
     {
-        _contrastSlider = [[ASValueTrackingSlider alloc] init];
+        _contrastSlider = [[NEASValueTrackingSlider alloc] init];
         [_contrastSlider setThumbImage:[UIImage imageNamed:@"slider_thumb"] forState:UIControlStateNormal];
         _contrastSlider.maximumValue = 4.0;
         _contrastSlider.popUpViewCornerRadius = 0.0;
@@ -330,11 +330,11 @@ const CGFloat defaultConstrastSlidervalue = 1.0;
     return _contrastSlider;
 }
 
-- (ASValueTrackingSlider *)smoothSlider
+- (NEASValueTrackingSlider *)smoothSlider
 {
     if (!_smoothSlider)
     {
-        _smoothSlider = [[ASValueTrackingSlider alloc] init];
+        _smoothSlider = [[NEASValueTrackingSlider alloc] init];
         [_smoothSlider setThumbImage:[UIImage imageNamed:@"slider_thumb"] forState:UIControlStateNormal];
         _smoothSlider.maximumValue = 1.0;
         _smoothSlider.popUpViewCornerRadius = 0.0;

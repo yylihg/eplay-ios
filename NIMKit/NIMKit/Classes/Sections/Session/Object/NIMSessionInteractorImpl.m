@@ -17,7 +17,7 @@
 #import "NIMKitAudioCenter.h"
 
 static const void * const NTESDispatchMessageDataPrepareSpecificKey = &NTESDispatchMessageDataPrepareSpecificKey;
-dispatch_queue_t NTESMessageDataPrepareQueue()
+dispatch_queue_t NTESMessageDataPrepareQueue1()
 {
     static dispatch_queue_t queue;
     static dispatch_once_t onceToken;
@@ -111,7 +111,7 @@ dispatch_queue_t NTESMessageDataPrepareQueue()
         self.pendingChatroomModels = [[NSMutableArray alloc] init];
     }
     __weak typeof(self) weakSelf = self;
-    dispatch_async(NTESMessageDataPrepareQueue(), ^{
+    dispatch_async(NTESMessageDataPrepareQueue1(), ^{
         NSMutableArray *models = [[NSMutableArray alloc] init];
         for (NIMMessage *message in messages)
         {

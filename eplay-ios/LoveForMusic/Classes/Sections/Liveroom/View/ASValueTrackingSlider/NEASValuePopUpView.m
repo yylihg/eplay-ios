@@ -7,11 +7,11 @@
 //
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// This UIView subclass is used internally by ASValueTrackingSlider
-// The public API is declared in ASValueTrackingSlider.h
+// This UIView subclass is used internally by NEASValueTrackingSlider
+// The public API is declared in NEASValueTrackingSlider.h
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-#import "ASValuePopUpView.h"
+#import "NEASValuePopUpView.h"
 
 const float ARROW_LENGTH = 13.0;
 const float MIN_POPUPVIEW_WIDTH = 36.0;
@@ -21,7 +21,7 @@ const float POPUPVIEW_HEIGHT_PAD = 1.1;
 
 NSString *const FillColorAnimation = @"fillColor";
 
-@implementation ASValuePopUpView
+@implementation NEASValuePopUpView
 {
     NSMutableAttributedString *_attributedString;
     CAShapeLayer *_backgroundLayer;

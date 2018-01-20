@@ -37,6 +37,10 @@
     [_link invalidate];
 }
 
+- (void)dealloc {
+    [_link invalidate];
+}
+
 - (CGSize)sizeThatFits:(CGSize)size {
     return CGSizeMake(70, 20);;
 }

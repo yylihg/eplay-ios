@@ -1,22 +1,22 @@
 //
-//  ASValueTrackingSlider.m
+//  NEASValueTrackingSlider.m
 //  ValueTrackingSlider
 //
 //  Created by Alan Skipp on 19/10/2013.
 //  Copyright (c) 2013 Alan Skipp. All rights reserved.
 //
 
-#import "ASValueTrackingSlider.h"
-#import "ASValuePopUpView.h"
+#import "NEASValueTrackingSlider.h"
+#import "NEASValuePopUpView.h"
 
 static void * ASValueTrackingSliderBoundsContext = &ASValueTrackingSliderBoundsContext;
 
-@interface ASValueTrackingSlider() <ASValuePopUpViewDelegate>
-@property (strong, nonatomic) ASValuePopUpView *popUpView;
+@interface NEASValueTrackingSlider() <NEASValuePopUpViewDelegate>
+@property (strong, nonatomic) NEASValuePopUpView *popUpView;
 @property (nonatomic) BOOL popUpViewAlwaysOn; // (default is NO)
 @end
 
-@implementation ASValueTrackingSlider
+@implementation NEASValueTrackingSlider
 {
     NSNumberFormatter *_numberFormatter;
     CGSize _defaultPopUpViewSize; // size that fits largest string from _numberFormatter
@@ -172,7 +172,7 @@ static void * ASValueTrackingSliderBoundsContext = &ASValueTrackingSliderBoundsC
     [self.popUpView hide];
 }
 
-#pragma mark - ASValuePopUpViewDelegate
+#pragma mark - NEASValuePopUpViewDelegate
 
 - (void)colorAnimationDidStart
 {
@@ -207,7 +207,7 @@ static void * ASValueTrackingSliderBoundsContext = &ASValueTrackingSliderBoundsC
     [formatter setMinimumFractionDigits:2];
     _numberFormatter = formatter;
 
-    self.popUpView = [[ASValuePopUpView alloc] initWithFrame:CGRectMake(0, 0, 1, 1)];
+    self.popUpView = [[NEASValuePopUpView alloc] initWithFrame:CGRectMake(0, 0, 1, 1)];
     self.popUpViewColor = [UIColor colorWithHue:0.6 saturation:0.6 brightness:0.5 alpha:0.8];
 
     self.popUpViewCornerRadius = 4.0;

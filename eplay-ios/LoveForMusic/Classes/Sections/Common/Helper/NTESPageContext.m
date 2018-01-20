@@ -51,7 +51,7 @@
 
 - (void)setupMainViewController
 {
-    NTESLoginData *data = [[NTESLoginManager sharedManager] currentNTESLoginData];
+    LoginData *data = [[NTESLoginManager sharedManager] currentLoginData];
     NSString *account = [data account];
     NSString *token   = [data token];
     UIViewController *vc;
@@ -78,7 +78,7 @@
         [error code] == NIMRemoteErrorCodeExist)
     {
         [[[NIMSDK sharedSDK] loginManager] logout:^(NSError *error) {
-            [[NTESLoginManager sharedManager] setCurrentNTESLoginData:nil];
+            [[NTESLoginManager sharedManager] setCurrentLoginData:nil];
             [self setupMainViewController];
         }];
     }
@@ -105,7 +105,7 @@
     [[[NIMSDK sharedSDK] loginManager] logout:nil];
     
     [[NTESServiceManager sharedManager] destory];
-    [[NTESLoginManager sharedManager] setCurrentNTESLoginData:nil];
+    [[NTESLoginManager sharedManager] setCurrentLoginData:nil];
     [self setupMainViewController];
     
     dispatch_async(dispatch_get_main_queue(), ^{

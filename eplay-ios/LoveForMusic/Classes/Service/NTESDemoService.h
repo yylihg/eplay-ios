@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "NTESDemoRegisterTask.h"
 #import "NTESDemoFetchChatroomTask.h"
-
+#import "NTESDemoLiveroomTask.h"
 
 
 @interface NTESDemoService : NSObject
@@ -19,4 +19,17 @@
           completion:(NTESRegisterHandler)completion;
 
 - (void)fetchDemoChatrooms:(NTESChatroomListHandler)completion;
+
+- (void)requestLiveStream:(NSString *)identity
+               completion:(NTESChatroomStreamUrlHandler)completion;
+
+- (void)requestPlayStream:(NSString *)roomId
+               completion:(NTESPlayStreamQueryHandler)completion;
+
+- (void)requestMicQueuePush:(NTESQueuePushData *)data
+                 completion:(NTESDemoLiveMicQueuePushHandler)completion;
+
+- (void)requestMicQueuePop:(NTESQueuePopData *)data
+                completion:(NTESDemoLiveMicQueuePopHandler)completion;
+
 @end

@@ -23,9 +23,9 @@
  */
 
 #import "IJKSDLGLView.h"
-#include "ijksdl/ijksdl_timer.h"
-#include "ijksdl/ios/ijksdl_ios.h"
-#include "ijksdl/ijksdl_gles2.h"
+#include "ijksdl_timer.h"
+#include "ijksdl_ios.h"
+#include "ijksdl_gles2.h"
 #if defined NTESIJKSDLHudView
 #import "IJKSDLHudViewController.h"
 #endif

@@ -10,7 +10,7 @@
 #import "NTESLoginManager.h"
 #import "UIImage+NTES.h"
 
-double OnedayTimeIntervalValue = 24*60*60;  //一天的秒数
+double OnedayTimeIntervalValueLive = 24*60*60;  //一天的秒数
 @implementation NTESLiveUtil
 
 + (CGSize)getImageSizeWithImageOriginSize:(CGSize)originSize
@@ -119,7 +119,7 @@ double OnedayTimeIntervalValue = 24*60*60;  //一天的秒数
     {
         result = showDetail? [[NSString alloc] initWithFormat:@"前天%@ %zd:%02d",result,hour,(int)msgDateComponents.minute] : @"前天";
     }
-    else if([nowDate timeIntervalSinceDate:msgDate] < 7 * OnedayTimeIntervalValue)//一周内
+    else if([nowDate timeIntervalSinceDate:msgDate] < 7 * OnedayTimeIntervalValueLive)//一周内
     {
         NSString *weekDay = [NTESLiveUtil weekdayStr:msgDateComponents.weekday];
         result = showDetail? [weekDay stringByAppendingFormat:@"%@ %zd:%02d",result,hour,(int)msgDateComponents.minute] : weekDay;

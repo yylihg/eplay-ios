@@ -96,4 +96,51 @@
                                             userInfo:@{@"description" : @"use your own app server"}]];
     }
 }
+
+
+
+
+- (void)requestLiveStream:(NSString *)identity
+               completion:(NTESChatroomStreamUrlHandler)completion
+{
+    NTESDemoLiveroomTask *task = [[NTESDemoLiveroomTask alloc] init];
+    task.identity = identity;
+    task.handler = completion;
+    [self runTask:task];
+}
+
+
+- (void)requestPlayStream:(NSString *)roomId
+               completion:(NTESPlayStreamQueryHandler)completion
+{
+    NTESDemoPlayStreamQueryTask *task = [[NTESDemoPlayStreamQueryTask alloc] init];
+    task.roomId  = roomId;
+    task.handler = completion;
+    [self runTask:task];
+}
+
+- (void)requestMicQueuePush:(NTESQueuePushData *)data
+                 completion:(NTESDemoLiveMicQueuePushHandler)completion
+{
+    NTESDemoLiveMicQueuePushTask *task = [[NTESDemoLiveMicQueuePushTask alloc] init];
+    task.roomId = data.roomId;
+    task.ext = data.ext;
+    task.uid = data.uid;
+    task.handler = completion;
+    [self runTask:task];
+}
+
+- (void)requestMicQueuePop:(NTESQueuePopData *)data
+                completion:(NTESDemoLiveMicQueuePopHandler)completion
+{
+    if (!data.uid) {
+        return;
+    }
+    NTESDemoLiveMicQueuePopTask *task = [[NTESDemoLiveMicQueuePopTask alloc] init];
+    task.roomId = data.roomId;
+    task.uid = data.uid;
+    task.handler = completion;
+    [self runTask:task];
+}
+
 @end

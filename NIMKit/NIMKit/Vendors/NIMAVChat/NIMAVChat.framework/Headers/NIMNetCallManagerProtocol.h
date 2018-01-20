@@ -560,15 +560,25 @@ typedef NS_ENUM(NSInteger, NIMNetCallCamera){
            type:(NIMNetCallControlType)type;
 
 /**
- *  设置网络通话静音模式
+ *  设置网络通话麦克风静音
  *
- *  @param mute 是否开启静音
+ *  @param mute 是否开启麦克风静音
  *
- *  @return 开启静音是否成功
+ *  @return 开启麦克风静音是否成功
  *
- *  @discussion 切换网络通话类型将丢失该设置
+ *  @discussion 该设置不影响伴音发送, 切换网络通话类型将丢失该设置
  */
 - (BOOL)setMute:(BOOL)mute;
+
+/**
+ *  设置是否关闭语音发送，包含伴音
+ *
+ *  @param mute 是否关闭语音发送
+ *
+ *  @return 设置是否成功
+ *
+ */
+- (BOOL)setAudioSendMute:(BOOL)mute;
 
 /**
  *  设置网络通话扬声器模式

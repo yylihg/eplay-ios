@@ -8,6 +8,7 @@
 
 #import "NTESChatroomSegmentedControl.h"
 #import "NTESPageView.h"
+#import "NTESLiveViewDefine.h"
 
 @protocol NTESLiveActionViewDataSource <NSObject>
 
@@ -24,6 +25,8 @@
 @protocol NTESLiveActionViewDelegate <NSObject>
 
 @optional
+
+- (void)onActionType:(NTESLiveActionType)type sender:(id)sender;
 
 - (void)onSegmentControlChanged:(NTESChatroomSegmentedControl *)control;
 
@@ -44,5 +47,23 @@
 - (instancetype)initWithDataSource:(id<NTESLiveActionViewDataSource>) datasource;
 
 - (void)reloadData;
+
+- (void)setActionType:(NTESLiveActionType)type disable:(BOOL)disable;
+
+- (void)updateInteractButton:(NSInteger)count;
+
+- (void)firstLineViewMoveToggle:(BOOL)isMoveUp;
+
+- (void)updateFocusButton:(BOOL)isOn;
+
+- (void)updateflashButton:(BOOL)isOn;
+
+- (void)updateMirrorButton:(BOOL)isOn;
+
+- (void)updateBeautify:(BOOL)isBeautify;
+
+- (void)updateQualityButton:(BOOL)isHigh;
+
+- (void)updateWaterMarkButton:(BOOL)isOn;
 
 @end
