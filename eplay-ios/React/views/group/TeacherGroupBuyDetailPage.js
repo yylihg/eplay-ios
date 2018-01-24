@@ -73,8 +73,8 @@ export default class TeacherGroupBuyDetailPage extends Component {
             if (error) {
             } else {
                 var liveInfo = response.data?response.data.data:{};
-                if (liveInfo && liveInfo.ROOMID){
-                    ReactIMModule.pushLiveController(liveInfo.ROOMID, "ddd");
+                if (liveInfo && liveInfo.ROOMID && liveInfo.PUSH_URL){
+                    ReactIMModule.pushLiveController(liveInfo.ROOMID, liveInfo.PUSH_URL);
                 }
             }
         });

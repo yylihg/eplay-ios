@@ -87,8 +87,8 @@ export default class StudentTeamListView extends Component {
 
             if (error) {
             } else {
-                if (response && response.data && response.data.data && response.data.data.TEAM_ID){
-                    ReactIMModule.pushTeamSessionController(response.data.data.TEAM_ID);
+                if (response && response.data && response.data.data && response.data.data.TID){
+                    ReactIMModule.pushTeamSessionController(response.data.data.TID);
                 }
             }
         });

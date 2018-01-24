@@ -13,6 +13,7 @@
 #import "VideoViewController.h"
 #import "NTESLoginManager.h"
 #import "NSString+NTES.h"
+#import "NTESService.h"
 
 @interface ViewController ()
 //- (IBAction)goRN:(id)sender;
@@ -86,24 +87,24 @@
 
 - (IBAction)LoginBtn:(id)sender {
     //判断是否正在登陆，是的话不做响应
-    if (isLogining) {
-        [self showDialog:@"正在登陆"];
-        return;
-    }
-    //判断用户名是否为空，为空提示用户
-    if ([self.usernameET.text isEqualToString:@""]) {
-        self.usernameET.placeholder = @"用户名不能为空";
-        [self showDialog:@"用户名不能为空"];
-        return;
-    }
-    //判断密码是否为空，为空提示用户
-    if ([self.passwordET.text isEqualToString:@""]) {
-        self.passwordET.placeholder = @"密码不能为空";
-        [self showDialog:@"密码不能为空"];
-        return;
-    }
-    self.progressBar.hidden = NO;
-    
+//    if (isLogining) {
+//        [self showDialog:@"正在登陆"];
+//        return;
+//    }
+//    //判断用户名是否为空，为空提示用户
+//    if ([self.usernameET.text isEqualToString:@""]) {
+//        self.usernameET.placeholder = @"用户名不能为空";
+//        [self showDialog:@"用户名不能为空"];
+//        return;
+//    }
+//    //判断密码是否为空，为空提示用户
+//    if ([self.passwordET.text isEqualToString:@""]) {
+//        self.passwordET.placeholder = @"密码不能为空";
+//        [self showDialog:@"密码不能为空"];
+//        return;
+//    }
+//    self.progressBar.hidden = NO;
+//
     [self getAccessToken];
 
 }
@@ -131,10 +132,10 @@
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager.requestSerializer setValue:_userInfo.accessToken forHTTPHeaderField:@"access-token"];
     NSMutableDictionary *parameters = [[NSMutableDictionary alloc] init];
-    [parameters setObject:self.usernameET.text forKey:@"username"];
-    [parameters setObject:self.passwordET.text forKey:@"password"];
-//    [parameters setObject:@"15959445322"forKey:@"username"];
-//    [parameters setObject:@"wbk123" forKey:@"password"];
+//    [parameters setObject:self.usernameET.text forKey:@"username"];
+//    [parameters setObject:self.passwordET.text forKey:@"password"];
+    [parameters setObject:@"15959445222"forKey:@"username"];
+    [parameters setObject:@"wxh123" forKey:@"password"];
     [manager POST: [NSString stringWithFormat:@"%@%@" , [Utils getStringFromPlist:@"connectIp"],@"/api/login/login.do" ]  parameters:parameters
          progress:^(NSProgress * _Nonnull uploadProgress) {
         
@@ -168,7 +169,7 @@
                                                        sdkData.account   = loginAccount;
                                                        sdkData.token     = loginToken;
                                                        [[NTESLoginManager sharedManager] setCurrentLoginData:sdkData];
-                                                       
+                                                        [[NTESServiceManager sharedManager] start];
                                                    }
                                                }];
                  

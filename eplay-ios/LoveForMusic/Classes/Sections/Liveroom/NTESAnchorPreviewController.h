@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface NTESAnchorPreviewController : UIViewController
-
+@property (nonatomic, strong)   NIMChatroom *chatroom;
 @end

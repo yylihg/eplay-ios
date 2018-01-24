@@ -49,11 +49,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSString * strUrl = @"http://127.0.0.1:8081/index.ios.bundle?platform=ios&dev=true";
+    NSString * strUrl = @"http://192.168.1.20:8081/index.ios.bundle?platform=ios&dev=true";
     [self.params setValue:@"resume" forKey:@"viewControllerState"];
-//     NSString * strUrl = @"http://30.33.48.95:8081/index.ios.bundle?platform=ios&dev=true";
-//    NSURL * jsCodeLocation = [NSURL URLWithString:strUrl];
-        NSURL * jsCodeLocation =[[NSBundle mainBundle] URLForResource:@"jsbundle/ios" withExtension:@"jsbundle"];
+    NSURL * jsCodeLocation = [NSURL URLWithString:strUrl];
+//        NSURL * jsCodeLocation =[[NSBundle mainBundle] URLForResource:@"jsbundle/ios" withExtension:@"jsbundle"];
     self.rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                          moduleName: component
                                                   initialProperties:params

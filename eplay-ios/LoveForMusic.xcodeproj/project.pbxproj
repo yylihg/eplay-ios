@@ -482,6 +482,7 @@
 		4F5482612013961800DC3855 /* libNELivePlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F54825F2013961800DC3855 /* libNELivePlayer.a */; };
 		4F5482622013961800DC3855 /* libNMCBasicModule.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F5482602013961800DC3855 /* libNMCBasicModule.a */; };
 		4F5482642013982000DC3855 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F5482632013982000DC3855 /* libresolv.tbd */; };
+		4F5482672014730100DC3855 /* ReactIMModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5482652014730100DC3855 /* ReactIMModule.m */; };
 		4F562BAF1FC0861500D8F25B /* NIMKitEmoticon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4F562B9B1FC0861400D8F25B /* NIMKitEmoticon.bundle */; };
 		4F562BB01FC0861500D8F25B /* NIMKitSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4F562B9C1FC0861400D8F25B /* NIMKitSettings.bundle */; };
 		4F562BB11FC0861500D8F25B /* BlizzardReg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F562B9E1FC0861500D8F25B /* BlizzardReg.ttf */; };
@@ -1308,6 +1309,8 @@
 		4F54825F2013961800DC3855 /* libNELivePlayer.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNELivePlayer.a; sourceTree = "<group>"; };
 		4F5482602013961800DC3855 /* libNMCBasicModule.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNMCBasicModule.a; sourceTree = "<group>"; };
 		4F5482632013982000DC3855 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		4F5482652014730100DC3855 /* ReactIMModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReactIMModule.m; sourceTree = "<group>"; };
+		4F5482662014730100DC3855 /* ReactIMModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactIMModule.h; sourceTree = "<group>"; };
 		4F562B9B1FC0861400D8F25B /* NIMKitEmoticon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = NIMKitEmoticon.bundle; path = "Supporting Files/NIMKitEmoticon.bundle"; sourceTree = "<group>"; };
 		4F562B9C1FC0861400D8F25B /* NIMKitSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = NIMKitSettings.bundle; path = "Supporting Files/NIMKitSettings.bundle"; sourceTree = "<group>"; };
 		4F562B9E1FC0861500D8F25B /* BlizzardReg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BlizzardReg.ttf; sourceTree = "<group>"; };
@@ -1626,6 +1629,8 @@
 		4DCBD96D1E75A0C10039282D /* ReactNative */ = {
 			isa = PBXGroup;
 			children = (
+				4F5482662014730100DC3855 /* ReactIMModule.h */,
+				4F5482652014730100DC3855 /* ReactIMModule.m */,
 				4DCBD96E1E75A0C10039282D /* CalendarManager.h */,
 				4DCBD96F1E75A0C10039282D /* CalendarManager.m */,
 				4DCBD9701E75A0C10039282D /* ReactViewController.h */,
@@ -3462,6 +3467,7 @@
 				4F0CD7B11FBB48A9001F6745 /* NTESNickNameSettingViewController.m in Sources */,
 				4F0CD8431FBB48A9001F6745 /* NTESChatroomRobotContentConfig.m in Sources */,
 				4F5481CF200B477800DC3855 /* NTESLiveCoverView.m in Sources */,
+				4F5482672014730100DC3855 /* ReactIMModule.m in Sources */,
 				4F0CD8261FBB48A9001F6745 /* NTESSessionUtil.m in Sources */,
 				4F0CD8201FBB48A9001F6745 /* UIImage+NTES.m in Sources */,
 				4F0CD7BE1FBB48A9001F6745 /* NTESNoDisturbSettingViewController.m in Sources */,

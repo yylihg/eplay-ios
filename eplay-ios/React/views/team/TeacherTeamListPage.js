@@ -100,8 +100,8 @@ export default class TeacherTeamListPage extends Component {
             console.log('ihg /answerClass/begin.do', response)
             if (error) {
             } else {
-                if (response && response.data && response.data.data && response.data.data.TEAM_ID){
-                    ReactIMModule.pushTeamSessionController(response.data.data.TEAM_ID);
+                if (response && response.data && response.data.data && response.data.data.TID){
+                    ReactIMModule.pushTeamSessionController(response.data.data.TID);
                 }
             }
         });

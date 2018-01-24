@@ -27,6 +27,10 @@
 #import "NTESRedPacketManager.h"
 #import "NTESBundleSetting.h"
 
+#import "NTESPageContext.h"
+#import "NTESAttachDecoder.h"
+#import "NTESNetDetectManger.h"
+
 #define ScreenHeight [[UIScreen mainScreen] bounds].size.height//获取屏幕高度，兼容性测试
 #define ScreenWidth [[UIScreen mainScreen] bounds].size.width//获取屏幕宽度，兼容性测试
 
@@ -345,7 +349,7 @@ CGRectMake1(CGFloat x, CGFloat y, CGFloat width, CGFloat height)
     
     //注册自定义消息的解析器
     [NIMCustomObject registerCustomDecoder:[NTESCustomAttachmentDecoder new]];
-    
+    [[NTESNetDetectManger sharedmanager]startNetDetect];
     //注册 NIMKit 自定义排版配置
     [[NIMKit sharedKit] registerLayoutConfig:[NTESCellLayoutConfig new]];
 }

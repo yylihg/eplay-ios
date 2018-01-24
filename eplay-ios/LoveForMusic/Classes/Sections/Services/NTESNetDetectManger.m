@@ -42,15 +42,15 @@
     self.detectCompleted = NO;
 
     //demo 只做针对480P的视频探测
-    [[NIMAVChatSDK sharedSDK].avchatNetDetectManager startDetectTaskForDetectType:NIMAVChatNetDetectType480P                completion:^(NIMAVChatNetDetectResult * _Nonnull result) {
-            weakself.detectResult = result;
-            weakself.detectCompleted = YES;
-            weakself.detectTime = [NSDate date];
-        
-            [[NSNotificationCenter defaultCenter] postNotificationName:DetectResultNotification
-                                                                object:nil
-                                                              userInfo:nil];
-    }];
+//    [[NIMAVChatSDK sharedSDK].avchatNetDetectManager startDetectTaskForDetectType:NIMAVChatNetDetectType480P                completion:^(NIMAVChatNetDetectResult * _Nonnull result) {
+//            weakself.detectResult = result;
+//            weakself.detectCompleted = YES;
+//            weakself.detectTime = [NSDate date];
+//
+//            [[NSNotificationCenter defaultCenter] postNotificationName:DetectResultNotification
+//                                                                object:nil
+//                                                              userInfo:nil];
+//    }];
 
 }
 

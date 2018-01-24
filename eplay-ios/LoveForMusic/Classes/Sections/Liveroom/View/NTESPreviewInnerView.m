@@ -465,7 +465,7 @@
 #pragma mark - NTESLiveCoverViewDelegate
 - (void)didPressBackButton
 {
-    [self.viewController dismissViewControllerAnimated:YES completion:nil];
+    [self.viewController.navigationController popViewControllerAnimated:YES];
 }
 
 

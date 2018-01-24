@@ -29,7 +29,6 @@
 
 @property (nonatomic, strong) UIButton *startLiveButton;          //开始直播按钮
 
-@property (nonatomic, copy)   NIMChatroom *chatroom;
 
 @property (nonatomic, strong) NIMNetCallMeeting *currentMeeting;
 
@@ -222,52 +221,42 @@
     
     __weak typeof(self) wself = self;
 
-    [[NTESDemoService sharedService] requestLiveStream:meetingName completion:^(NSError *error, NIMChatroom *chatroom) {
-        if (!error)
-        {
-            NSInteger orientation = !(wself.orientation ==NIMVideoOrientationLandscapeRight) ? 1 : 2;
-            _chatroom = chatroom;
-            NIMChatroomEnterRequest *request = [[NIMChatroomEnterRequest alloc] init];
-            request.roomId = chatroom.roomId;
-            request.roomNotifyExt = [@{
-                                       NTESCMType  : @([NTESLiveManager sharedInstance].type),
-                                       NTESCMMeetingName: meetingName,
-                                       
-                                       NTESCMOrientation :@(orientation)
-                                       } jsonBody];
+    
+    NSInteger orientation = !(wself.orientation ==NIMVideoOrientationLandscapeRight) ? 1 : 2;
+    NIMChatroomEnterRequest *request = [[NIMChatroomEnterRequest alloc] init];
+    request.roomId = _chatroom.roomId;
+    request.roomNotifyExt = [@{
+                               NTESCMType  : @([NTESLiveManager sharedInstance].type),
+                               NTESCMMeetingName: meetingName,
+                               
+                               NTESCMOrientation :@(orientation)
+                               } jsonBody];
+    
+    [[NIMSDK sharedSDK].chatroomManager enterChatroom:request completion:^(NSError *error, NIMChatroom *room, NIMChatroomMember *me) {
+        if (!error) {
+            //这里拿到的是应用服务器的人数，没有把自己加进去，手动添加。
+            _chatroom = room;
+            _chatroom.onlineUserCount++;
+            //将room的扩展也加进去
+//            _chatroom.ext =[NTESLiveUtil jsonString:_chatroom.ext addJsonString:request.roomNotifyExt];
             
-            [[NIMSDK sharedSDK].chatroomManager enterChatroom:request completion:^(NSError *error, NIMChatroom *room, NIMChatroomMember *me) {
-                if (!error) {
-                    //这里拿到的是应用服务器的人数，没有把自己加进去，手动添加。
-                    chatroom.onlineUserCount++;
-                    //将room的扩展也加进去
-                    chatroom.ext =[NTESLiveUtil jsonString:chatroom.ext addJsonString:request.roomNotifyExt];
-                    
-                    
-                    [[NTESLiveManager sharedInstance] cacheMyInfo:me roomId:request.roomId];
-                    [[NTESLiveManager sharedInstance] cacheChatroom:chatroom];
-                    
-                    NIMNetCallMeeting *meeting = [[NIMNetCallMeeting alloc] init];
-                    meeting.name = meetingName;
-                    meeting.type = (NIMNetCallMediaType)[NTESLiveManager sharedInstance].type;
-                    meeting.actor = YES;
-                    wself.preMeeting = meeting;
-                    NIMNetCallOption *option = [NTESUserUtil fillNetCallOption:meeting];
-                    option.bypassStreamingUrl = chatroom.broadcastUrl;
-                    
-                    [[NIMAVChatSDK sharedSDK].netCallManager reserveMeeting:meeting completion:^(NIMNetCallMeeting * _Nonnull currentMeeting, NSError * _Nonnull error) {
-                        
-                        [wself.capture setMeeting:currentMeeting];
-                        if (completion) {
-                            completion(error);
-                        }
-                    }];
-                }
-                else
-                {
-                    if (completion) {
-                        completion(error);
-                    }
+            
+            [[NTESLiveManager sharedInstance] cacheMyInfo:me roomId:request.roomId];
+            [[NTESLiveManager sharedInstance] cacheChatroom:_chatroom];
+            
+            NIMNetCallMeeting *meeting = [[NIMNetCallMeeting alloc] init];
+            meeting.name = meetingName;
+            meeting.type = (NIMNetCallMediaType)[NTESLiveManager sharedInstance].type;
+            meeting.actor = YES;
+            wself.preMeeting = meeting;
+            NIMNetCallOption *option = [NTESUserUtil fillNetCallOption:meeting];
+            option.bypassStreamingUrl = _chatroom.broadcastUrl;
+            
+            [[NIMAVChatSDK sharedSDK].netCallManager reserveMeeting:meeting completion:^(NIMNetCallMeeting * _Nonnull currentMeeting, NSError * _Nonnull error) {
+                
+                [wself.capture setMeeting:currentMeeting];
+                if (completion) {
+                    completion(error);
                 }
             }];
         }
@@ -362,7 +351,7 @@
         meeting.name = self.meetingname;
         [[NIMAVChatSDK sharedSDK].netCallManager leaveMeeting:meeting];
     }
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)onCameraRotate
