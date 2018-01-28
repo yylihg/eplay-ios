@@ -62,10 +62,8 @@ export default class StudentGroupBuyDetailPage extends Component {
 
 
     _startCourse(){
-        alert(JSON.stringify(this.props))
         ReactModule.fetch("get", {api: "/groupLive/goLiveClass.do?orderId=" + this.props.GROUP_ORDER_ID}, function (error, response) {
             console.log('/groupLive/goLiveClass.do', response)
-            alert(JSON.stringify(response))
             if (error) {
             } else {
                 var liveInfo = response.data?response.data.data:{};

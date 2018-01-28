@@ -29,6 +29,8 @@
     #import "NIMKit.h"
     #import <CocoaLumberjack/CocoaLumberjack.h>
 
+    #import "MainViewController.h"
+
     #ifdef DEBUG
     static DDLogLevel ddLogLevel = DDLogLevelVerbose;
     #else

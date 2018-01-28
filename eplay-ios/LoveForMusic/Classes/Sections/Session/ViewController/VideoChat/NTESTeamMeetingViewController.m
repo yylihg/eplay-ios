@@ -713,7 +713,7 @@ typedef NS_ENUM(NSInteger,NTESTeamMeetingRoleType) {
 
 - (void)dismiss
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (NSInteger)rowsInSection

@@ -19,7 +19,6 @@
 #import "NTESLoginManager.h"
 #import "NTESCustomAttachmentDecoder.h"
 #import "NTESClientUtil.h"
-#import "NTESNotificationCenter.h"
 #import "NIMKit.h"
 #import "NTESSDKConfigDelegate.h"
 #import "NTESCellLayoutConfig.h"
@@ -105,8 +104,8 @@ CGRectMake1(CGFloat x, CGFloat y, CGFloat width, CGFloat height)
     
 //    [self setupMainViewController];
 //
-//    [[NTESRedPacketManager sharedManager] application:application didFinishLaunchingWithOptions:launchOptions];
-//    DDLogInfo(@"launch with options %@",launchOptions);
+    [[NTESRedPacketManager sharedManager] application:application didFinishLaunchingWithOptions:launchOptions];
+    DDLogInfo(@"launch with options %@",launchOptions);
 //
     return YES;
 }

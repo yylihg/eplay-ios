@@ -9,7 +9,6 @@
 #import "NTESNotificationCenter.h"
 #import "NTESVideoChatViewController.h"
 #import "NTESAudioChatViewController.h"
-#import "NTESMainTabController.h"
 #import "NTESSessionViewController.h"
 #import "NSDictionary+NTESJson.h"
 #import "NTESCustomNotificationDB.h"
@@ -101,7 +100,7 @@ NIMRTSManagerDelegate,NIMChatManagerDelegate,NIMBroadcastManagerDelegate>
 
 - (void)playMessageAudioTip
 {
-    UINavigationController *nav = [NTESMainTabController instance].selectedViewController;
+    UINavigationController *nav = [MainViewController instance].selectedViewController;
     BOOL needPlay = YES;
     for (UIViewController *vc in nav.viewControllers) {
         if ([vc isKindOfClass:[NIMSessionViewController class]] ||  [vc isKindOfClass:[NTESLiveViewController class]] || [vc isKindOfClass:[NTESNetChatViewController class]])
@@ -181,7 +180,7 @@ NIMRTSManagerDelegate,NIMChatManagerDelegate,NIMBroadcastManagerDelegate>
     tipMessage.setting = setting;
     tipMessage.timestamp = notification.timestamp;
     
-    NTESMainTabController *tabVC = [NTESMainTabController instance];
+    MainViewController *tabVC = [MainViewController instance];
     UINavigationController *nav = tabVC.selectedViewController;
 
     for (NTESSessionViewController *vc in nav.viewControllers) {
@@ -244,7 +243,8 @@ NIMRTSManagerDelegate,NIMChatManagerDelegate,NIMBroadcastManagerDelegate>
                             info.teamName = [dict jsonString:NTESTeamMeetingTeamName];
                             
                             NTESTeamMeetingCallingViewController *vc = [[NTESTeamMeetingCallingViewController alloc] initWithCalleeInfo:info];
-                            [self presentModelViewController:vc];
+                            AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+                            [app.nav pushViewController:vc animated:YES];
                         }                        
                     }                    
                 }
@@ -259,7 +259,7 @@ NIMRTSManagerDelegate,NIMChatManagerDelegate,NIMBroadcastManagerDelegate>
 #pragma mark - NIMNetCallManagerDelegate
 - (void)onReceive:(UInt64)callID from:(NSString *)caller type:(NIMNetCallMediaType)type message:(NSString *)extendMessage{
     
-    NTESMainTabController *tabVC = [NTESMainTabController instance];
+    MainViewController *tabVC = [MainViewController instance];
     [tabVC.view endEditing:YES];
     UINavigationController *nav = tabVC.selectedViewController;
 
@@ -340,10 +340,10 @@ NIMRTSManagerDelegate,NIMChatManagerDelegate,NIMBroadcastManagerDelegate>
 
 - (void)presentModelViewController:(UIViewController *)vc
 {
-    NTESMainTabController *tab = [NTESMainTabController instance];
+    MainViewController *tab = [MainViewController instance];
     [tab.view endEditing:YES];
     if (tab.presentedViewController) {
-        __weak NTESMainTabController *wtabVC = tab;
+        __weak MainViewController *wtabVC = tab;
         [tab.presentedViewController dismissViewControllerAnimated:NO completion:^{
             [wtabVC presentViewController:vc animated:NO completion:nil];
         }];
@@ -360,7 +360,7 @@ NIMRTSManagerDelegate,NIMChatManagerDelegate,NIMBroadcastManagerDelegate>
 
 - (BOOL)shouldResponseBusy
 {
-    NTESMainTabController *tabVC = [NTESMainTabController instance];
+    MainViewController *tabVC = [MainViewController instance];
     UINavigationController *nav = tabVC.selectedViewController;
     return [nav.topViewController isKindOfClass:[NTESNetChatViewController class]] ||
     [tabVC.presentedViewController isKindOfClass:[NTESWhiteboardViewController class]] ||
@@ -442,7 +442,7 @@ NIMRTSManagerDelegate,NIMChatManagerDelegate,NIMBroadcastManagerDelegate>
 #pragma mark - Misc
 - (NIMSessionViewController *)currentSessionViewController
 {
-    UINavigationController *nav = [NTESMainTabController instance].selectedViewController;
+    UINavigationController *nav = [MainViewController instance].selectedViewController;
     for (UIViewController *vc in nav.viewControllers)
     {
         if ([vc isKindOfClass:[NIMSessionViewController class]])
@@ -455,7 +455,7 @@ NIMRTSManagerDelegate,NIMChatManagerDelegate,NIMBroadcastManagerDelegate>
 
 - (void)makeToast:(NSString *)content
 {
-    [[NTESMainTabController instance].selectedViewController.view makeToast:content duration:2.0 position:CSToastPositionCenter];
+    [[MainViewController instance].selectedViewController.view makeToast:content duration:2.0 position:CSToastPositionCenter];
 }
 
 @end

@@ -16,5 +16,7 @@
 
 //@property (nonatomic, strong) AMapLocationManager *locationManager;
 @property (nonatomic, strong) UISegmentedControl *showSegment;
++ (instancetype)instance;
+
 
 @end

@@ -11,12 +11,23 @@
 #import "ReactViewController.h"
 
 #import "MainMenuModel.h"
-@interface MainViewController ()
+@interface MainViewController ()<NIMSystemNotificationManagerDelegate,NIMConversationManagerDelegate>
 //@property (weak, nonatomic) IBOutlet UITabBar *tabViewContainer;
 
 @end
 
 @implementation MainViewController
+
++ (instancetype)instance{
+    AppDelegate *delegete = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    UIViewController *vc = delegete.window.rootViewController;
+    if ([vc isKindOfClass:[MainViewController class]]) {
+        return (MainViewController *)vc;
+    }else{
+        return nil;
+    }
+}
+
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -104,6 +115,12 @@
     }
     self.tabBar.backgroundColor =[UIColor colorWithRed:240/250.0 green:240/250.0 blue:240/250.0 alpha:1.0];
     self.viewControllers =viewArray;
+    
+    
+    [[NIMSDK sharedSDK].systemNotificationManager addDelegate:self];
+    [[NIMSDK sharedSDK].conversationManager addDelegate:self];
+    extern NSString *NTESCustomNotificationCountChanged;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onCustomNotifyChanged:) name:NTESCustomNotificationCountChanged object:nil];
 }
 
 //-(void)initMap{
@@ -144,5 +161,20 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+
+#pragma mark - Notification
+- (void)onCustomNotifyChanged:(NSNotification *)notification
+{
+}
+
+
+
+- (void)dealloc{
+    [[NIMSDK sharedSDK].systemNotificationManager removeDelegate:self];
+    [[NIMSDK sharedSDK].conversationManager removeDelegate:self];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 @end

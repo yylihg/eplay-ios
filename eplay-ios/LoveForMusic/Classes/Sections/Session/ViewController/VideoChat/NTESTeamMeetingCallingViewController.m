@@ -91,16 +91,18 @@
 - (IBAction)connect:(id)sender
 {
     NTESTeamMeetingViewController *vc = [[NTESTeamMeetingViewController alloc] initWithCalleeInfo:self.info];
-    UIViewController *presentingViewController = self.presentingViewController;
-    [self dismissViewControllerAnimated:NO completion:^{
-        [presentingViewController presentViewController:vc animated:NO completion:nil];
-    }];
+    [self.navigationController popViewControllerAnimated:NO];
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [app.nav pushViewController:vc animated:YES];
+//    UIViewController *presentingViewController = self.presentingViewController;
+//    [presentingViewController.navigationController pushViewController:vc animated:YES];
+    
 }
 
 #pragma mark - Private
 - (void)dismiss
 {
-    [self dismissViewControllerAnimated:NO completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)checkServiceEnable:(void(^)(BOOL))result{
