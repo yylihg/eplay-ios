@@ -112,4 +112,5 @@
 /**
  *  SDK业务类
  */
+#import "NIMServerSetting.h"
 #import "NIMSDKHeader.h"

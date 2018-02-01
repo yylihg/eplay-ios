@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @class NIMSDKOption;
+@class NIMServerSetting;
 
 /**
  *  NIMSDK
@@ -92,7 +93,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)enableConsoleLog;
 
-
+/**
+ *  当前服务器配置
+ *  @discussion 私有化需要进行自定义设置，必须在注册 appkey 完成之前设置
+ */
+@property (nonatomic,strong)           NIMServerSetting    *serverSetting;
 /**
  *  登录管理类 负责登录,注销和相关操作的通知收发
  */

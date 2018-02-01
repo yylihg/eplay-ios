@@ -73,13 +73,29 @@ typedef void(^NIMDownloadCompleteBlock)(NSError * __nullable error);
 
 
 /**
+ *  规范化 URL 地址
+ *
+ *  @param urlString url 地址
+ *  @discussion 按照 NIMSDK 的要求对 url 进行规范化处理，调用该接口等同于同时调用 convertHttpToHttps: 和 convertURLToAcceleratedURL:
+ */
+- (NSString *)normalizeURLString:(NSString *)urlString;
+
+/**
  *  将 http url 转换为 https url
  *
- *  @param httpURLString http url 地址
+ *  @param urlString http url 地址
  *  @discussion SDK 会自动处理除自定义消息外所有消息内的 http url 以保证符合苹果的审核请求，但是自定义消息中的 http 地址 SDK 并不知道具体属性在哪，所以在做这些文件下载时，需要上层自己处理
  *              如果传入的 url 是 https 地址，直接返回字符串本身。如果传入的 url 是云信无法识别 host 的 http 地址，直接返回添加了 https 的地址
  */
-- (NSString *)convertHttpToHttps:(NSString *)httpURLString;
+- (NSString *)convertHttpToHttps:(NSString *)urlString;
+
+/**
+ *  将 url 转换为加速后的 CDN url 地址
+ *
+ *  @param urlString 未加速 url 地址
+ *  @discussion SDK 会自动处理除自定义消息外所有消息内的 url 进行 CDN 加速，但是自定义消息中的 url 地址 SDK 并不知道具体属性在哪，所以在做这些文件下载时，需要上层传入对应的 URL 替换为走 CDN 格式的地址，以获得 CDN 加速的效果
+ */
+- (NSString *)convertURLToAcceleratedURL:(NSString *)urlString;
 
 @end
 

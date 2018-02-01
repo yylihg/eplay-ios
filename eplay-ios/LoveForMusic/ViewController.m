@@ -134,8 +134,8 @@
     NSMutableDictionary *parameters = [[NSMutableDictionary alloc] init];
 //    [parameters setObject:self.usernameET.text forKey:@"username"];
 //    [parameters setObject:self.passwordET.text forKey:@"password"];
-    [parameters setObject:@"15959445222"forKey:@"username"];
-    [parameters setObject:@"wxh123" forKey:@"password"];
+    [parameters setObject:@"15959445322"forKey:@"username"];
+    [parameters setObject:@"wbk123" forKey:@"password"];
     [manager POST: [NSString stringWithFormat:@"%@%@" , [Utils getStringFromPlist:@"connectIp"],@"/api/login/login.do" ]  parameters:parameters
          progress:^(NSProgress * _Nonnull uploadProgress) {
         

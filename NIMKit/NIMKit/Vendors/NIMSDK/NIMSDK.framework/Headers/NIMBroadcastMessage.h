@@ -2,7 +2,7 @@
 //  NIMBroadcastMessage.h
 //  NIMLib
 //
-//  Created by amao on 2017/9/19.
+//  Created by Netease.
 //  Copyright © 2017年 Netease. All rights reserved.
 //
 

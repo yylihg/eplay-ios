@@ -97,7 +97,7 @@ NTES_FORBID_INTERACTIVE_POP
     //先切到等待界面
     [self.innerView switchToWaitingUI];
     
-//    请求拉流地址
+    //请求拉流地址
 //    [self requestPlayStream];
     //进入聊天室
     [self enterChatroom];
@@ -430,28 +430,28 @@ NTES_FORBID_INTERACTIVE_POP
         return;
     }
     __weak typeof(self) wself = self;
-    [[NTESDemoService sharedService] requestPlayStream:_chatroomId completion:^(NSError *error, NSString *playStreamUrl,NTESLiveType liveType,NIMVideoOrientation orientation) {
+//    [[NTESDemoService sharedService] requestPlayStream:_chatroomId completion:^(NSError *error, NSString *playStreamUrl,NTESLiveType liveType,NIMVideoOrientation orientation) {
         NSString *me = [[NIMSDK sharedSDK].loginManager currentAccount];
         if ([[NTESLiveManager sharedInstance].connectorOnMic.uid isEqualToString:me]) {
             DDLogDebug(@"already on mic ,ignore requested play stream");
             //请求拉流地址回来后，发现自己已经上麦了，则不需要再开启播放器
             return;
         }
-        if (!error) {
-            DDLogDebug(@"request play stream complete: %@, canvas: %@, live type : %@",playStreamUrl,wself.canvas,[NTESLiveUtil liveTypeToString:liveType]);
-            [NTESLiveManager sharedInstance].type = liveType;
-            [wself startPlay:playStreamUrl inView:wself.canvas];
-        }
-        else
-        {
-            DDLogDebug(@"start play stream error: %zd, try again in 5 sec.",error.code);
-            //拉地址没成功，则过5秒重试
-            NSTimeInterval delay = 5.f;
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [wself requestPlayStream];
-            });
-        }
-    }];
+//        if (!error) {
+//            DDLogDebug(@"request play stream complete: %@, canvas: %@, live type : %@",playStreamUrl,wself.canvas,[NTESLiveUtil liveTypeToString:liveType]);
+//            [NTESLiveManager sharedInstance].type = liveType;
+            [wself startPlay:_streamUrl inView:wself.canvas];
+//        }
+//        else
+//        {
+//            DDLogDebug(@"start play stream error: %zd, try again in 5 sec.",error.code);
+//            //拉地址没成功，则过5秒重试
+//            NSTimeInterval delay = 5.f;
+//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//                [wself requestPlayStream];
+//            });
+//        }
+//    }];
 }
 
 - (void)requestMicQueue
@@ -611,7 +611,7 @@ NTES_FORBID_INTERACTIVE_POP
     __weak typeof(self) weakSelf = self;
     [self shutdown:^{
         [SVProgressHUD dismiss];
-        [weakSelf dismissViewControllerAnimated:YES completion:nil];
+        [weakSelf.navigationController popViewControllerAnimated:YES];
     }];
     
 }

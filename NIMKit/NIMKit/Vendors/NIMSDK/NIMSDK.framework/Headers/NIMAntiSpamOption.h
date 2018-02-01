@@ -26,6 +26,14 @@ NS_ASSUME_NONNULL_BEGIN
  * 需要反垃圾的内容
  */
 @property (nullable,nonatomic,copy)     NSString    *content;
+
+/**
+ * 用户在易盾配置的额外反垃圾的业务ID
+ */
+@property (nullable,nonatomic,copy)     NSString    *businessId;
+
+
+
 @end
 
 NS_ASSUME_NONNULL_END
