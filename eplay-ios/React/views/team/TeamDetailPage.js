@@ -81,7 +81,7 @@ export default class TeamDetailPage extends Component {
                         <Text style={styles.rowTitle}>{this.props.ORDER_NAME}</Text>
                         <ListLine></ListLine>
                         <Text style={styles.rowDes}>课程类型：{this.props.CLASS_TYPE_NAME}</Text>
-                        <Text style={styles.rowDes}>价格：{this.props.CLASS_PRICE}</Text>
+                        {/*<Text style={styles.rowDes}>价格：{this.props.CLASS_PRICE}</Text>*/}
                         <Text style={styles.rowDes}>小组课人数：{this.props.GROUP_SIZE}</Text>
                         <Text style={styles.rowDes}>已参加人数：{this.props.CURRENT_SIZE}</Text>
                         <Text style={styles.rowDes}>创建人：{this.props.NAME}</Text>

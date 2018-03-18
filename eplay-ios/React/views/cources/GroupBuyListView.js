@@ -101,11 +101,11 @@ export default class GroupBuyListView extends Component {
                             <Text style={styles.listItemTitle}>{item.ORDER_NAME}</Text>
                             <Text numberOfLines={2}  style={styles.listItemDes}>{item.TEACHER_EXPERIENCE}</Text>
                         </View>
-                        <TouchableHighlight style={styles.selectBtn} underlayColor = '#eee' onPress={()=>this._onSelectCource(item)}>
-                            <View >
-                                <Text style={styles.selectBtnText}>团购</Text>
-                            </View>
-                        </TouchableHighlight>
+                        {/*<TouchableHighlight style={styles.selectBtn} underlayColor = '#eee' onPress={()=>this._onSelectCource(item)}>*/}
+                            {/*<View >*/}
+                                {/*<Text style={styles.selectBtnText}>团购</Text>*/}
+                            {/*</View>*/}
+                        {/*</TouchableHighlight>*/}
                     </View>
                     <ListLine style ={styles.listItemLine}/>
                 </View>

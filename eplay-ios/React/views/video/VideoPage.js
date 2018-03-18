@@ -23,8 +23,8 @@ export default class VideoView extends Component {
             <View style={{flex:1}}>
                 <HeadView title="视频列表"></HeadView>
                 <ScrollableTabView >
-                    <VideoDemoVideoView tabLabel="试看视频"></VideoDemoVideoView>
-                    <VideoFormalVideoView tabLabel="正式视频"></VideoFormalVideoView>
+                    <VideoDemoVideoView tabLabel="公益视频"></VideoDemoVideoView>
+                    <VideoFormalVideoView tabLabel="专业视频"></VideoFormalVideoView>
                 </ScrollableTabView>
             </View>
 

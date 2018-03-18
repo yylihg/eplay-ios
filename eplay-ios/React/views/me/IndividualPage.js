@@ -151,40 +151,40 @@ export default class IndividualView extends Component {
                                 <Image style={styles.rightArrow} source={require('../../img/icon_right_arrow.png')} />
                             </View>
                         </TouchableHighlight>
-                        <View style={styles.btnLine}></View>
-                        {
-                            this.state.userType == "teacher"?
-                                <TouchableHighlight underlayColor = '#eee' onPress={()=>this._onPressButton(8)}>
-                                    <View style={styles.btnStyle}>
-                                        <Image style={styles.btnImg} source={require('../../img/me/icon_me_group.png')} />
-                                        <Text style={styles.btnText}>发布的团购课程</Text>
-                                        <Image style={styles.rightArrow} source={require('../../img/icon_right_arrow.png')} />
-                                    </View>
-                                </TouchableHighlight>:<TouchableHighlight underlayColor = '#eee' onPress={()=>this._onPressButton(11)}>
-                                <View style={styles.btnStyle}>
-                                    <Image style={styles.btnImg} source={require('../../img/me/icon_me_group.png')} />
-                                    <Text style={styles.btnText}>我的团购课程</Text>
-                                    <Image style={styles.rightArrow} source={require('../../img/icon_right_arrow.png')} />
-                                </View>
-                            </TouchableHighlight>
-                        }
-                        <View style={styles.btnLine}></View>
-                        {
-                            this.state.userType == "teacher"?
-                                <TouchableHighlight underlayColor = '#eee' onPress={()=>this._onPressButton(9)}>
-                                    <View style={styles.btnStyle}>
-                                        <Image style={styles.btnImg} source={require('../../img/me/icon_me_team.png')} />
-                                        <Text style={styles.btnText}>发布的小组课</Text>
-                                        <Image style={styles.rightArrow} source={require('../../img/icon_right_arrow.png')} />
-                                    </View>
-                                </TouchableHighlight>:<TouchableHighlight underlayColor = '#eee' onPress={()=>this._onPressButton(12)}>
-                                <View style={styles.btnStyle}>
-                                    <Image style={styles.btnImg} source={require('../../img/me/icon_me_team.png')} />
-                                    <Text style={styles.btnText}>我的小组课</Text>
-                                    <Image style={styles.rightArrow} source={require('../../img/icon_right_arrow.png')} />
-                                </View>
-                            </TouchableHighlight>
-                        }
+                        {/*<View style={styles.btnLine}></View>*/}
+                        {/*{*/}
+                            {/*this.state.userType == "teacher"?*/}
+                                {/*<TouchableHighlight underlayColor = '#eee' onPress={()=>this._onPressButton(8)}>*/}
+                                    {/*<View style={styles.btnStyle}>*/}
+                                        {/*<Image style={styles.btnImg} source={require('../../img/me/icon_me_group.png')} />*/}
+                                        {/*<Text style={styles.btnText}>发布的团购课程</Text>*/}
+                                        {/*<Image style={styles.rightArrow} source={require('../../img/icon_right_arrow.png')} />*/}
+                                    {/*</View>*/}
+                                {/*</TouchableHighlight>:<TouchableHighlight underlayColor = '#eee' onPress={()=>this._onPressButton(11)}>*/}
+                                {/*<View style={styles.btnStyle}>*/}
+                                    {/*<Image style={styles.btnImg} source={require('../../img/me/icon_me_group.png')} />*/}
+                                    {/*<Text style={styles.btnText}>我的团购课程</Text>*/}
+                                    {/*<Image style={styles.rightArrow} source={require('../../img/icon_right_arrow.png')} />*/}
+                                {/*</View>*/}
+                            {/*</TouchableHighlight>*/}
+                        {/*}*/}
+                        {/*<View style={styles.btnLine}></View>*/}
+                        {/*{*/}
+                            {/*this.state.userType == "teacher"?*/}
+                                {/*<TouchableHighlight underlayColor = '#eee' onPress={()=>this._onPressButton(9)}>*/}
+                                    {/*<View style={styles.btnStyle}>*/}
+                                        {/*<Image style={styles.btnImg} source={require('../../img/me/icon_me_team.png')} />*/}
+                                        {/*<Text style={styles.btnText}>发布的小组课</Text>*/}
+                                        {/*<Image style={styles.rightArrow} source={require('../../img/icon_right_arrow.png')} />*/}
+                                    {/*</View>*/}
+                                {/*</TouchableHighlight>:<TouchableHighlight underlayColor = '#eee' onPress={()=>this._onPressButton(12)}>*/}
+                                {/*<View style={styles.btnStyle}>*/}
+                                    {/*<Image style={styles.btnImg} source={require('../../img/me/icon_me_team.png')} />*/}
+                                    {/*<Text style={styles.btnText}>我的小组课</Text>*/}
+                                    {/*<Image style={styles.rightArrow} source={require('../../img/icon_right_arrow.png')} />*/}
+                                {/*</View>*/}
+                            {/*</TouchableHighlight>*/}
+                        {/*}*/}
                         {
                             this.state.userType == "teacher"?<View></View>:
                                 <View style={styles.btnLine}></View>
@@ -194,7 +194,7 @@ export default class IndividualView extends Component {
                                 <TouchableHighlight underlayColor = '#eee' onPress={()=>this._onPressButton(2)}>
                                     <View style={styles.btnStyle}>
                                         <Image style={styles.btnImg} source={require('../../img/me/icon_me_video.png')} />
-                                        <Text style={styles.btnText}>购买的视频</Text>
+                                        <Text style={styles.btnText}>我的视频</Text>
                                         <Image style={styles.rightArrow} source={require('../../img/icon_right_arrow.png')} />
                                     </View>
                                 </TouchableHighlight>

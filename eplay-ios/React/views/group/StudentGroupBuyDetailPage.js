@@ -85,9 +85,9 @@ export default class StudentGroupBuyDetailPage extends Component {
                         <Text style={styles.rowTitle}>{this.props.ORDER_NAME}</Text>
                         <ListLine></ListLine>
                         <Text style={styles.rowDes}>课程类型：{this.props.CLASS_TYPE_NAME}</Text>
-                        <Text style={styles.rowDes}>团购价格：{this.props.CLASS_PRICE}</Text>
-                        <Text style={styles.rowDes}>课程总价：{this.props.TOTAL_PRICE}</Text>
-                        <Text style={styles.rowDes}>已团购人数：{this.props.CURRENT_SIZE}</Text>
+                        {/*<Text style={styles.rowDes}>团购价格：{this.props.CLASS_PRICE}</Text>*/}
+                        {/*<Text style={styles.rowDes}>课程总价：{this.props.TOTAL_PRICE}</Text>*/}
+                        {/*<Text style={styles.rowDes}>已团购人数：{this.props.CURRENT_SIZE}</Text>*/}
                         <Text style={styles.rowDes}>上传人：{this.props.NAME}</Text>
                     </View>
                     <TouchableHighlight style={styles.buttonStyle} underlayColor = '#eee' onPress={()=>this._startCourse()}>

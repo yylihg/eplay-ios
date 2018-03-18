@@ -130,9 +130,9 @@ export default class TeacherDetailView extends Component {
                 <View style={{height: 1, backgroundColor:"#ccc"}}></View>
                 {
                     <ScrollableTabView renderTabBar={() => <CustomTabBar someProp={'here'} />}>
-                        <TeacherDemoVideoView tabLabel="试看视频"  id = {this.props.id}></TeacherDemoVideoView>
+                        <TeacherDemoVideoView tabLabel="公益视频"  id = {this.props.id}></TeacherDemoVideoView>
                         <StudentListPage tabLabel="学生风采"  api="/studentVideo/list.do" id = {this.props.id}></StudentListPage>
-                        <TeacherTeamListView tabLabel="小组课程" id = {this.props.id}></TeacherTeamListView>
+                        {/*<TeacherTeamListView tabLabel="小组课程" id = {this.props.id}></TeacherTeamListView>*/}
                     </ScrollableTabView>
                 }
 

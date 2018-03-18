@@ -59,10 +59,10 @@ export default class SelectCourcesPage extends Component {
         return (
             <View style={{flex:1}}>
                 <HeadView title="约课"></HeadView>
-                <ScrollableTabView renderTabBar={() => <CustomTabBar someProp={'here'} />}>
+                {/*<ScrollableTabView renderTabBar={() => <CustomTabBar someProp={'here'} />}>*/}
                     <TeacherListView isLogin={this.state.isLogin} tabLabel="教师资源"></TeacherListView>
-                    <GroupBuyListView isLogin={this.state.isLogin} tabLabel="团购课程"></GroupBuyListView>
-                </ScrollableTabView>
+                    {/*<GroupBuyListView isLogin={this.state.isLogin} tabLabel="团购课程"></GroupBuyListView>*/}
+                {/*</ScrollableTabView>*/}
             </View>
         );
     }

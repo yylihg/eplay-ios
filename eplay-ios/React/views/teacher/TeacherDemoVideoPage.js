@@ -65,7 +65,7 @@ class TeacherDemoVideoPage extends Component {
     render() {
         return (
             <View>
-                <HeadViewWithLeftBtn title = "试看视频"></HeadViewWithLeftBtn>
+                <HeadViewWithLeftBtn title = "公益视频"></HeadViewWithLeftBtn>
                 <ListLine style ={styles.listItemLine}/>
                 <AnimatedFlatList
                     style = {{marginBottom:70}}

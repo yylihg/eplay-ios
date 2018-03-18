@@ -61,7 +61,7 @@ class BoughtVideoListPage extends Component {
     render() {
         return (
             <View>
-                <HeadViewWithLeftBtn title = "购买的视频"></HeadViewWithLeftBtn>
+                <HeadViewWithLeftBtn title = "我的视频"></HeadViewWithLeftBtn>
                 <AnimatedFlatList
                     style= {styles.list}
                     data={this.state.videos}
