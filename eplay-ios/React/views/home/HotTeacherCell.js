@@ -26,11 +26,11 @@ class HotTeacherCell extends Component {
                         <Image style={styles.listItemImage} source={this.props.imageUrl}/>
                         <View style={styles.listItemText}>
                             <View style={styles.listItemTitleContainer}>
-                                <Text style={styles.listItemTitle}>{this.props.teacher.NAME}</Text>
+                                <Text numberOfLines={1} style={styles.listItemTitle}>{this.props.teacher.NAME}</Text>
                                 <Image style={{height: 10, width:10}} source={require('../../img/Home/icon_level_point.png')}/>
-                                <Text style={styles.listItemLevelPoint}>{this.props.teacher.LEVEL_POINTS}</Text>
+                                <Text numberOfLines={1} style={styles.listItemLevelPoint}>{this.props.teacher.LEVEL_POINTS}</Text>
                             </View>
-                            <Text style={styles.listItemDes}>{this.props.teacher.TEACH_EXPERIENCE}</Text>
+                            <Text numberOfLines={2} style={styles.listItemDes}>{this.props.teacher.TEACH_EXPERIENCE}</Text>
                         </View>
                     </View>
 
@@ -79,6 +79,7 @@ const styles = StyleSheet.create({
     listItemDes: {
         fontSize: 12,
         marginTop: 8,
+
         color: '#999'
     },
     listItemLine: {

@@ -89,7 +89,7 @@ class VideoListPage extends Component {
                         <Image style={styles.listItemImage} source={{uri: item.PRIVIEW_IMG_URL}}/>
                         <View style={styles.listItemText}>
                             <Text style={styles.listItemTitle}>{item.VIDEO_NAME}</Text>
-                            <Text style={styles.listItemDes}>{item.VIDEO_REMARK}</Text>
+                            <Text numberOfLines={2} style={styles.listItemDes}>{item.VIDEO_REMARK}</Text>
                         </View>
                     </View>
                     <ListLine style ={styles.listItemLine}/>

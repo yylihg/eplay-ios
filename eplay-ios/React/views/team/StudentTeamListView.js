@@ -87,8 +87,8 @@ export default class StudentTeamListView extends Component {
 
             if (error) {
             } else {
-                if (response && response.data && response.data.data && response.data.data.TEAM_ID){
-                    ReactIMModule.pushTeamSessionController(response.data.data.TEAM_ID);
+                if (response && response.data && response.data.data && response.data.data.TID){
+                    ReactIMModule.pushTeamSessionController(response.data.data.TID);
                 }
             }
         });
@@ -102,7 +102,7 @@ export default class StudentTeamListView extends Component {
                         <Image style={styles.listItemImage} source={{uri: item.TEACHER_IMG_URL}}/>
                         <View style={styles.listItemText}>
                             <Text style={styles.listItemTitle}>{item.ORDER_NAME}</Text>
-                            <Text style={styles.listItemDes}>{item.TEACHER_EXPERIENCE}</Text>
+                            <Text numberOfLines={2} style={styles.listItemDes}>{item.TEACHER_EXPERIENCE}</Text>
                         </View>
                     </View>
                     <ListLine style ={styles.listItemLine}/>

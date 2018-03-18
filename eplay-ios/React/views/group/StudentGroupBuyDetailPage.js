@@ -62,15 +62,14 @@ export default class StudentGroupBuyDetailPage extends Component {
 
 
     _startCourse(){
-        ReactModule.fetch("get", {api: "groupLive/goLiveClass.do?orderId=" + this.props.ORDER_ID}, function (error, response) {
-            console.log('/groupLive/begin.do', response)
-            alert(JSON.stringify(error))
+        ReactModule.fetch("get", {api: "/groupLive/goLiveClass.do?orderId=" + this.props.GROUP_ORDER_ID}, function (error, response) {
+            console.log('/groupLive/goLiveClass.do', response)
             if (error) {
             } else {
                 var liveInfo = response.data?response.data.data:{};
-                // if (liveInfo && liveInfo.ROOMID && liveInfo.PUSH_URL){
-                //     ReactIMModule.pushLiveController(liveInfo.ROOMID, liveInfo.PUSH_URL);
-                // }
+                if (liveInfo && liveInfo.ROOMID && liveInfo.RTMP_PULL_URL){
+                    ReactIMModule.pushLivePlayController(liveInfo.ROOMID, liveInfo.RTMP_PULL_URL);
+                }
             }
         });
      }

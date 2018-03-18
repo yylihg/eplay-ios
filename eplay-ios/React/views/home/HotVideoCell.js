@@ -24,8 +24,8 @@ class HotVideoCell extends Component {
                 <View style={styles.container}>
                     <Image style={styles.imageIcon} source={this.props.imageUrl}/>
                     <View style={styles.listItemText}>
-                        <Text style={styles.titleStyle}>{this.props.video.VIDEO_NAME}</Text>
-                        <Text style={styles.listItemDes}>{this.props.video.VIDEO_REMARK}</Text>
+                        <Text numberOfLines={1} style={styles.titleStyle}>{this.props.video.VIDEO_NAME}</Text>
+                        <Text numberOfLines={2} style={styles.listItemDes}>{this.props.video.VIDEO_REMARK}</Text>
                     </View>
                 </View>
             </TouchableHighlight>

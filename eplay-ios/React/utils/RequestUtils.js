@@ -14,7 +14,10 @@ var findNodeHandle = require('findNodeHandle');
 export default class RequestUtils {
     static fetch(self, method, params, callback){
         ReactModule.fetch(method, params, function (error, response) {
-            console.log(response.code + "ihg RequestUtils" + JSON.stringify(response));
+            if (!response){
+                return;
+            }
+            console.log(response.code || "" + "ihg RequestUtils" + JSON.stringify(response));
 
 
             if (response.code == '90002' || response.code == '90003' || response.code == '90005'){

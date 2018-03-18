@@ -102,8 +102,8 @@ class SeeDemoVideoView extends Component {
                     <View style={styles.listItemContainer}>
                         <Image style={styles.listItemImage} source={{uri: item.PRIVIEW_IMG_URL}}/>
                         <View style={styles.listItemText}>
-                            <Text style={styles.listItemTitle}>{item.VIDEO_NAME}</Text>
-                            <Text style={styles.listItemDes}>{item.VIDEO_REMARK}</Text>
+                            <Text numberOfLines={1} style={styles.listItemTitle}>{item.VIDEO_NAME}</Text>
+                            <Text numberOfLines={2} style={styles.listItemDes}>{item.VIDEO_REMARK}</Text>
                         </View>
                         <TouchableHighlight style={styles.collectBtn} underlayColor = '#eee' onPress={()=>this._collectVideo(item)}>
                             <Image style={styles.collectImg} source={item.IS_COLLECT?require('../../img/see/icon_see_collected.png'):require('../../img/see/icon_see_collect.png')}/>

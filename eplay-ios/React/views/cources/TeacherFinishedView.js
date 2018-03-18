@@ -88,7 +88,7 @@ export default class TeacherFinishedView extends Component {
                         <Image style={styles.listItemImage} source={{uri: item.TEACHER_IMG_URL}}/>
                         <View style={styles.listItemText}>
                             <Text numberOfLines = {1} style={styles.listItemTitle}>{item.ORDER_NAME}</Text>
-                            <Text style={styles.listItemDes}>{item.TEACHER_EXPERIENCE}</Text>
+                            <Text numberOfLines={2} style={styles.listItemDes}>{item.TEACHER_EXPERIENCE}</Text>
                         </View>
                     </View>
                     <ListLine style ={styles.listItemLine}/>

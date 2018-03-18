@@ -98,8 +98,8 @@ class TeacherListView extends Component {
                     <View style={styles.listItemContainer}>
                         <Image style={styles.listItemImage} source={{uri: item.PHOTO0}}/>
                         <View style={styles.listItemText}>
-                            <Text style={styles.listItemTitle}>{item.NAME}</Text>
-                            <Text style={styles.listItemDes}>{item.TEACH_EXPERIENCE}</Text>
+                            <Text numberOfLines={1} style={styles.listItemTitle}>{item.NAME}</Text>
+                            <Text numberOfLines={2} style={styles.listItemDes}>{item.TEACH_EXPERIENCE}</Text>
                         </View>
                         <TouchableHighlight style={styles.selectBtn} underlayColor = '#eee' onPress={()=>this._onSelectCource(item)}>
                             <View >

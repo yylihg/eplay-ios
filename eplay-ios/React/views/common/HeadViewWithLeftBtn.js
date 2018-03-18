@@ -30,7 +30,7 @@ export default class HeadViewWithLeftBtn extends Component {
                         <Image style={styles.backImg} source={require('../../img/icon_back.png')} />
                     </View>
                 </TouchableHighlight>
-                <Text style={styles.headerViewTitle}>{this.props.title}</Text>
+                <Text numberOfLines={1} style={styles.headerViewTitle}>{this.props.title}</Text>
             </View>
         );
     }

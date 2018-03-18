@@ -29,7 +29,7 @@ class InstrumentCell extends Component  {
                 underlayColor="rgb(210, 230,255)">
                 <View style={styles.container}>
                     <Image style={styles.iconImg} source={this.props.imageUrl}/>
-                    <Text style={styles.showText}>{this.props.title}</Text>
+                    <Text numberOfLines={1} style={styles.showText}>{this.props.title}</Text>
                 </View>
             </TouchableHighlight>
         );

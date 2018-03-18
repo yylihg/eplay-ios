@@ -66,12 +66,12 @@ export default class SeeView extends Component {
                 <HeadView title="视频列表"></HeadView>
                 {this.state.user.userType == "teacher"?
                     <ScrollableTabView renderTabBar={() => <CustomTabBar someProp={'here'} />}>
-                        <SeeTeacherDemoVideoView tabLabel="试看视频"></SeeTeacherDemoVideoView>
-                        <SeeTeacherFormalVideoView tabLabel="正式视频"></SeeTeacherFormalVideoView>
+                        <SeeTeacherDemoVideoView tabLabel="公益教学"></SeeTeacherDemoVideoView>
+                        <SeeTeacherFormalVideoView tabLabel="专业教学"></SeeTeacherFormalVideoView>
                     </ScrollableTabView>
                     :<ScrollableTabView renderTabBar={() => <CustomTabBar someProp={'here'} />}>
-                        <SeeDemoVideoView isLogin={this.state.isLogin} tabLabel="试看视频"></SeeDemoVideoView>
-                        <SeeFormalVideoView isLogin={this.state.isLogin}  tabLabel="正式视频"></SeeFormalVideoView>
+                        <SeeDemoVideoView isLogin={this.state.isLogin} tabLabel="公益教学"></SeeDemoVideoView>
+                        <SeeFormalVideoView isLogin={this.state.isLogin}  tabLabel="专业教学"></SeeFormalVideoView>
                     </ScrollableTabView> }
 
             </View>
