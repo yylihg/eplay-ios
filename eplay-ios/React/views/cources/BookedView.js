@@ -110,22 +110,29 @@ class BookedView extends Component {
         var context = this;
         let url = "";
             url = "/course/cancel.do?orderId=" + item.ORDER_ID;
-        context.state.cources.splice(item.key, 1);
+        var mCources = [];
+        for (let i = 0; i < context.state.cources.length; i++) {
+            if (item.key != context.state.cources[i].key){
+                var cource = context.state.cources[i];
+                cource.key = i;
+                mCources.push(cource);
+            }
+        }
         context.setState({
-            cources: context.state.cources
+            cources: mCources
         })
         ReactModule.fetch("get", {api: url}, function (error, response) {
             console.log('ihg ' + url, response)
             if (error) {
 
             } else {
-
             }
         });
     }
 
 
     _onSureChangeTime(item){
+        var context = this;
         let url = "/course/takeOrder.do?orderId=" + item.ORDER_ID;
         ReactModule.fetch("get", {api: url}, function (error, response) {
             console.log('ihg ' + url, response)
@@ -133,7 +140,7 @@ class BookedView extends Component {
 
             } else {
                 currentPage = 0;
-                this._getBookedList(currentPage);
+                context._getBookedList(currentPage);
             }
         });
     }

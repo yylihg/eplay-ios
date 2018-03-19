@@ -112,8 +112,13 @@ class FinishedView extends Component {
         if(item.ORDER_STATUS == 3){
             let url = "/course/evaluate.do?orderId=" + item.ORDER_ID;
             context.state.cources[item.key].ORDER_STATUS = 4;
+            var videos = [];
+            for (let i = 0; i < context.state.cources.length; i++) {
+                var cource = context.state.cources[i];
+                videos.push(cource);
+            }
             context.setState({
-                videos: context.state.cources
+                cources: videos
             });
             ReactModule.fetch("get", {api: url}, function (error, response) {
                 console.log('ihg ' + url, response)

@@ -79,6 +79,7 @@ const styles = StyleSheet.create({
         fontSize: 14
     },
     rowDes: {
+        padding: 5,
         marginLeft: 5,
         marginRight: 5,
         alignItems: 'center',

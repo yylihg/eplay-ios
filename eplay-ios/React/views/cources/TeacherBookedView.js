@@ -144,7 +144,7 @@ class TeacherBookedView extends Component {
 
             } else {
                 if (response && response.data && response.data.data && response.data.data.IM_USERNAME){
-                    ReactIMModule.pushSessionController(response.data.data.IM_USERNAME);
+                    // ReactIMModule.pushSessionController(response.data.data.IM_USERNAME);
                 }
             }
         });
